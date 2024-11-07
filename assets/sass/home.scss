@@ -1,6 +1,7 @@
-@import "fonts";
-@import "variables";
+@import "./fonts";
+@import "./variables";
+@import "./templates";
 
-@import "components/header";
-@import "components/main";
-@import "components/footer";
+@import "./components/header";
+@import "./components/main";
+@import "./components/footer";
