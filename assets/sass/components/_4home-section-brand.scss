@@ -8,15 +8,19 @@
 // }
 
 .brand {
+   @extend %container;
+
    display: flex;
    flex-direction: column;
-   width: 1110px;
+   // width: 1110px;
+   // max-width: 1110px;
 
    .brand__container {
       display: flex;
       flex-direction: row;
-      width: 1108px;
-      height: 487px;
+      // width: 1108px;
+      // max-width: 1108px;
+      // height: 487px;
       margin-top: 92px;
    
       .brand__photo-container {
@@ -24,7 +28,7 @@
       }
       
       .brand__info-container {
-         width: 255px;
+         max-width: 255px;
          display: flex;
          flex-direction: column;
          justify-content: space-around;
