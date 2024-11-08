@@ -1,26 +1,27 @@
 // Анасстасия. Добавила стили заголовов по макету
-h2,
-h3,
-h4 {
-    font-family: $font-family;
-    font-weight: 500;
-    line-height: 110%;
-    letter-spacing: 0.02em;
-    color: $text-basic-color;
-}
+// h2,
+// h3,
+// h4 {
+//     font-family: $font-family;
+//     font-weight: 500;
+//     line-height: 110%;
+//     letter-spacing: 0.02em;
+//     color: $text-basic-color;
+// }
 
-h2 {
-    font-size: 55px;
-}
+// h2 {
+//     font-size: 55px;
+// }
 
-h3 {
-    font-size: 40px;
-}
+// h3 {
+//     font-size: 40px;
+// }
 
-h4 {
-    font-size: 25px;
-    line-height: 140%;
-}
+// h4 {
+//     font-size: 25px;
+//     line-height: 140%;
+// }
+
 // ================ОБЩИЕ СТИЛИ=================//
 
 *, *::after, *::before {
@@ -31,7 +32,6 @@ h4 {
 
 html {
   height: 100%;
-  font-size: 62.5%; //10px
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
@@ -39,7 +39,8 @@ html {
 body {
   height: 100%;
 
-  font-family: "Raleway", sans-serif;
+  // font-family: "Raleway", sans-serif;
+  font-family: $font-family;
   font-weight: 500;
   font-size: 17px;
   line-height: 140%;
@@ -66,7 +67,7 @@ a {
   margin-top: 186px;
   font-family: "Raleway";
   font-weight: 500;
-  font-size: 5.5em;
+  font-size: 3.235294117647059em; // = 55px : 17px (было 5.5em)
   line-height: 110%;
   letter-spacing: 0.02em;
   color: $text-basic-color;
@@ -90,7 +91,7 @@ a {
 .title {
   font-family: $font-family;
   font-weight: 500;
-  font-size: 4em;
+  font-size: 2.352941176470588em; // = 40px : 17px (было 4em)
   line-height: 110%;
   letter-spacing: 0.02em;
   color: $text-basic-color;
@@ -110,7 +111,7 @@ a {
 .subtitle {
   font-family: $font-family;
   font-weight: 500;
-  font-size: 2.5em;
+  font-size: 1.5625em; // = 25px : 17px (было 2.5em)
   line-height: 140%;
   letter-spacing: 0.02em;
   color: $text-basic-color;
