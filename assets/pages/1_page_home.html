@@ -29,13 +29,32 @@
         <!-- Секция 1 Новые поступления в этом сезоне с переходом в магазин через кнопку _1home-section-main -->
         <div class="main">
             <div class="info-section">
-                <h2 class="info-section__title"></h2>
-                <p class="info-section__text"></p>
-                <button class="info-section__button info-section__button_open-shop"></button>
+                <div class="info-section__text-slider">
+                    <h2 class="text-slider__title" data-slide="0">Новые поступления <br>в этом сезоне</h2>
+                    <h2 class="text-slider__title" data-slide="1">Что-то новенькое <br>Мы заждались тебя</h2>
+                    <h2 class="text-slider__title" data-slide="2">Включай новый  <br>сезон с WOMAZING</h2>
+                    <p class="text-slider__text" data-slide="0">Утонченные сочетания и бархатные <br>оттенки - вот то, что вы искали в этом <br>сезоне. Время исследовать.</p>
+                    <p class="text-slider__text" data-slide="1">Надоело искать себя в сером городе? <br>Настало время новых идей, свежих <br>красок и вдохновения с Womazing!</p>
+                    <p class="text-slider__text" data-slide="2">Мы обновили ассортимент - <br>легендарные коллекции и новинки от <br>отечественных дизайнеров</p>
+                </div>
+                <button class="info-section__button info-section__button_open-shop">Открыть магазин</button>
                 <div class="info-section__scroll-bar">
+                    <span class="scroll-bar__dot" data-slide="0"></span>
+                    <span class="scroll-bar__dot" data-slide="1"></span>
+                    <span class="scroll-bar__dot" data-slide="2"></span>
                 </div>
             </div>
             <div class="photo-section">
+                <div class="photo-section__background"></div>
+                <div class="photo-section__slider">
+                    <img src="../images/homesec-main_1.png" alt="Woman in coat with purple hair" data-slide="0">
+                    <img src="../images/homesec-main_1.png" alt="Second Slide Image" data-slide="1">
+                    <img src="../images/homesec-main_1.png" alt="Third Slide Image" data-slide="2">
+                </div>
+                <div class="photo-section__static-images">
+                    <img src="../images/homesec-main_2.png" alt="Static Image 1">
+                    <img src="../images/homesec-main_3.png" alt="Static Image 2">
+                </div>
             </div>
         </div>
         <!-- Секция 2 Новая коллекция с переходом в магазин через кнопку _2home-section-shop -->
@@ -69,25 +88,17 @@
                 </div>
             </div>
         </div>
-
         <!-- Секция 4 Команда мечты Womazing _4homesec-brand -->
         <div class="brand">
-            <h3 class="brand__title title">Команда мечты Womazing</h3>
-            <div class="brand__container">
-                <div class="brand__photo-container">
-                    <img src="../images/homesec-brand_1.png" alt="team">
-                </div>
-                <div class="brand__info-container">
-                    <h4 class="brand__info-container brand__info-container_title subtitle">Для каждой</h4>
-                    <p class="brand__info-container brand__info-container_text">Каждая девушка уникальна. Однако, мы схожи в миллионе мелочей. <br><br>
-                    Womazing ищет эти мелочи и создает прекрасные вещи, которые выгодно подчеркивают достоинства каждой девушки.</p>
-                    <a class="brand__info-container brand__info-container_link" href="">Подробнее о бренде</a>
-                </div>
+            <h3 class="brand__title"></h3>
+            <div class="brand__photo-container"></div>
+            <div class="brand__info-container">
+                <h4 class="brand__info-container brand__info-container_title"></h4>
+                <p class="brand__info-container brand__info-container_text"></p>
+                <link class="brand__info-container brand__info-container_link" rel="stylesheet" href="#">
             </div>
         </div>
-
     </main>
-
     <!-- Футер _footer -->
     <footer class="footer">
         <div class="logo">
@@ -121,5 +132,6 @@
             </div>
         </div>
     </footer>
+    <script src="../script/_1home-section-main.js"></script>
 </body>
 </html>
