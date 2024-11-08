@@ -1,0 +1,48 @@
+.brand,
+.brand__container {
+   border: 1px solid red;
+}
+
+.brand__info-container {
+   border: 1px solid yellow;
+}
+
+.brand {
+   display: flex;
+   flex-direction: column;
+   width: 1110px;
+
+   .brand__container {
+      display: flex;
+      flex-direction: row;
+      width: 1108px;
+      height: 487px;
+      margin-top: 92px;
+   
+      .brand__photo-container {
+         flex: 1; //чтобы занимать всё доступное пространство в контейнере
+      }
+      
+      .brand__info-container {
+         width: 255px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+         margin-top: 50px;
+         margin-bottom: 50px;
+   
+         .brand__info-container_title {
+            margin: 0;
+         }
+   
+         .brand__info-container_text {
+            margin: 0;
+         }
+   
+         .brand__info-container_link {
+            margin: 0;
+            color: $main-color;
+         }
+      }
+   }
+}
