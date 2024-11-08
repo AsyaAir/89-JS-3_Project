@@ -12,6 +12,7 @@
   font-family: "Raleway";
   src: url(../fonts/Raleway-Regular.woff2);
   font-weight: 400;
+  font-size: 15px;
 }
 *, *::after, *::before {
   margin: 0;
@@ -27,6 +28,9 @@ html {
 
 body {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 17px;
@@ -163,15 +167,6 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-}
-
-.brand,
-.brand__container {
-  border: 1px solid red;
-}
-
-.brand__info-container {
-  border: 1px solid yellow;
 }
 
 .brand {
