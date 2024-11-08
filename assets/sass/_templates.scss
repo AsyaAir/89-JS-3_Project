@@ -1,0 +1,183 @@
+// ================ОБЩИЕ СТИЛИ=================//
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%; //10px
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: $text-basic-color;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: inherit;
+}
+
+//==================Заголовки====================//
+
+//этот шаблон можно добавить для заголовка "Новые поступления в этом сезоне"
+.page-title {
+  margin: auto;
+  margin-top: 186px;
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 5.5em;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: $text-basic-color;
+
+  @media screen and (max-width: 1024px) {
+    line-height: 70px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 5.4em;
+    line-height: 64px;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 4em;
+    line-height: 44px;
+  }
+}
+
+//этот шаблон можно добавить для заголовка "Новая коллекция"
+.title {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 4em;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: $text-basic-color;
+
+  @media screen and (max-width: 768px) {
+    font-size: 4em;
+    line-height: 44px;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 2.4em;
+    line-height: 28px;
+  }
+}
+
+//этот шаблон можно добавить для заголовка "Качество" "Скорость" "Ответственность"
+.subtitle {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 2.5em;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: $text-basic-color;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.8em;
+    line-height: 32px;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 2.4em;
+    line-height: 28px;
+  }
+}
+//================Конец Заголовки==================//
+
+//===================Навигация=====================//
+.navbar__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  height: 21px;
+
+  list-style: none;
+
+  .navbar__list-link {
+    font-size: 1.5em;
+  }
+
+  .navbar__list-link:hover {
+    opacity: 0.6;
+  }
+}
+//===============Конец Навигация==================//
+
+//====================Логотип=====================//
+
+//Womazing
+.logo {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  width: 118px;
+  height: 18px;
+
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.56px;
+  font-size: 1.4em;
+  text-transform: uppercase;
+
+  .logo__icon {
+    width: 19px;
+    height: 25px;
+  }
+
+  .logo__icon_black {
+    fill: $text-basic-color;
+  }
+}
+//==================Конец Логотип==================//
+
+//==================Кнопки====================//
+.button {
+  padding: 22px 50px;
+  width: 268px;
+  height: 68px;
+  background: $main-color;
+
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 139%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
+}
+//==================Конец Кнопки====================//
+
+//================КОНЕЦ ОБЩИЕ СТИЛИ================//
+
+//Шаблон для ограничения контента, добавлять к стилям командой @extend %container;
+%container {
+  max-width: 1110px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 32px;
+
+  @media screen and (max-width: 767px) {
+    padding: 0 20px;
+  }
+}
