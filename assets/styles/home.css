@@ -173,7 +173,6 @@ a {
   max-width: 1110px;
   min-width: 320px;
   margin: 0 auto;
-  padding: 0 32px;
 }
 @media screen and (max-width: 767px) {
   .brand {
@@ -319,10 +318,6 @@ a {
   border: 1px solid red;
 }
 
-.brand__info-container {
-  border: 1px solid yellow;
-}
-
 .brand {
   display: flex;
   flex-direction: column;
@@ -331,6 +326,11 @@ a {
   display: flex;
   flex-direction: row;
   margin-top: 92px;
+}
+.brand .brand__container .brand__button-arrow {
+  border: none;
+  background-color: transparent;
+  padding: 20px;
 }
 .brand .brand__container .brand__photo-container {
   position: relative;
