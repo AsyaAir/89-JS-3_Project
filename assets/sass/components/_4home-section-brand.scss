@@ -1,11 +1,11 @@
-// .brand,
-// .brand__container {
-//    border: 1px solid red;
-// }
+.brand,
+.brand__container {
+   border: 1px solid red;
+}
 
-// .brand__info-container {
-//    border: 1px solid yellow;
-// }
+.brand__info-container {
+   border: 1px solid yellow;
+}
 
 .brand {
    @extend %container;
@@ -24,7 +24,16 @@
       margin-top: 92px;
    
       .brand__photo-container {
-         flex: 1; //чтобы занимать всё доступное пространство в контейнере
+         // flex: 1; //чтобы занимать всё доступное пространство в контейнере
+         position: relative;
+         width: 729px;
+         height: 487px;
+
+         .brand__photo {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+         }
       }
       
       .brand__info-container {
