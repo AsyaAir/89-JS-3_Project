@@ -1,12 +1,11 @@
-@import "fonts";
-@import "variables";
-@import "templates";
+@import "./fonts";
+@import "./variables";
+@import "./templates";
 
-@import "components/header";
-@import "components/main";
-@import "components/1home-section-main";
-@import "components/2home-section-shop";
-@import "components/3home-section-mission";
-@import "components/4home-section-brand";
-@import "components/footer";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/1home-section-main";
+@import "./components/2home-section-shop";
+@import "./components/3home-section-mission";
+@import "./components/4home-section-brand";
 

@@ -13,8 +13,8 @@
     <!-- Шапка _header -->
     <header class="header">
         <div class="logo">
-            <a href="" class="logo">
-                <img src="./assets/icon/logo.svg" alt="" class="logo-img">
+            <a href="./1_page_home.html" class="logo-link">
+                <img src="../icon/logo_womazing.svg" alt="logo_womazing" class="logo-img">
                 Womazing
             </a>
         </div>
@@ -35,9 +35,18 @@
             </ul>
         </nav>
         <div class="phone">
-            <a href="tel:+74958235412" class="phone">+7 (495) 823-54-12</a>
+            <img src="../icon/telephone_icon.svg" alt="shopping_cart_icon" class="">
+            <a href="tel:+74958235412" class="phone">+7 (495) 823-54-12
+            </a>
         </div>
         <div class="cart">
+            <ul class="">
+                <li class="">
+                    <a href="" class="">
+                        <img src="../icon/shopping_cart_icon.svg" alt="shopping_cart_icon" class="">
+                    </a>
+                </li>
+            </ul>
         </div>
     </header>
 
@@ -76,13 +85,32 @@
 
         <!-- Секция 2 Новая коллекция с переходом в магазин через кнопку _2home-section-shop -->
         <div class="shop">
-            <h3 class="shop__title"></h3>
+            <h3 class="shop__title">Новая коллекция</h3>
+
             <div class="item-card__container" id="item-card">
-                <div class="item-card__container item-card__container_photo"></div>
-                <p class="item-card__container item-card__container_title"></p>
-                <div class="item-card__container item-card__container_price"></div>
+                <div class="item-card__container item-card__container_photo">
+                    <img src="../images/header_photos-products_one.png" alt="photos of products">
+                </div>
+                <p class="item-card__container item-card__container_title">Футболка USA</p>
+                <div class="item-card__container item-card__container_price">$229 $129</div>
             </div>
-            <button class="shop__button shop__button_open-shop"></button>
+
+            <div class="item-card__container" id="item-card">
+                <div class="item-card__container item-card__container_photo">
+                    <img src="../images/header_photos-products_two.png" alt="photos of products">
+                </div>
+                <p class="item-card__container item-card__container_title">Футболка USA</p>
+                <div class="item-card__container item-card__container_price">$229 $129</div>
+            </div>
+
+            <div class="item-card__container" id="item-card">
+                <div class="item-card__container item-card__container_photo">
+                    <img src="../images/header_photos-products_three.png" alt="photos of products">
+                </div>
+                <p class="item-card__container item-card__container_title">Футболка USA</p>
+                <div class="item-card__container item-card__container_price">$229 $129</div>
+            </div>
+            <button class="shop__button shop__button_open-shop">Открыть магазин</button>
         </div>
 
         <!-- Секция 3 Что для нас важно _3home-section-mission -->
@@ -126,7 +154,7 @@
                     <h4 class="brand__info-container brand__info-container_title subtitle">Для каждой</h4>
                     <p class="brand__info-container brand__info-container_text">Каждая девушка уникальна. Однако, мы схожи в миллионе мелочей. <br><br>
                     Womazing ищет эти мелочи и создает прекрасные вещи, которые выгодно подчеркивают достоинства каждой девушки.</p>
-                    <a class="brand__info-container brand__info-container_link" href="">Подробнее о бренде</a>
+                    <a class="brand__info-container brand__info-container_link" href="./4_about_brand.html">Подробнее о бренде</a>
                 </div>
             </div>
         </div>
@@ -135,32 +163,51 @@
 
     <!-- Футер _footer -->
     <footer class="footer">
-        <div class="logo">
-        </div>
-        <nav class="main-menu">
-            <ul>
-                <li class="main-menu__link main-menu__link_home"></li>
-                <li class="main-menu__link main-menu__link_shop"></li>
-                <li class="main-menu__link main-menu__link_about-brand"></li>
-                <li class="main-menu__link main-menu__link_contacts"></li>
-            </ul>
+
+        <nav class="footerbar">
+            <div class="logo">
+                <img src="../icon/logo_womazing.svg" alt="logo">
+            </div>
+            <div class="policies">
+                <p>© Все права защищены</p>
+                <a href="">Политика конфиденциальности</a>
+                <a href="">Публичная оферта</a>
+            </div>
         </nav>
-        <div class="policies">
-        </div>
-        <nav class="product-menu">
-            <ul>
-                <li class="product-menu__link product-menu__link_coats"></li>
-                <li class="product-menu__link product-menu__link_sweatshirts"></li>
-                <li class="product-menu__link product-menu__link_cardigans"></li>
-                <li class="product-menu__link product-menu__link_hoodies"></li>
-            </ul>
+
+        <nav class="footerbar">
+            <a href="" class="footerbarmenu main-menu main-menu__link main-menu__link_home">Главная</a>
         </nav>
-        <div class="contacts">
+
+        <nav class="footerbar">
+            <a href="" class="footerbarmenu main-menu__link main-menu__link_shop">Магазин</a>
+            <nav class="footerbar__product-menu product-menu">
+                <a href="" class="footerbarmenu__product-menu__coats product-menu__link product-menu__link_coats">Пальто</a>
+                <a href="" class="footerbarmenu__product-menu__sweatshirts product-menu__link product-menu__link_sweatshirts">Свитшоты</a>
+                <a href="" class="footerbarmenu__product-menu__cardigans product-menu__link product-menu__link_cardigans">Кардиганы</a>
+                <a href="" class="footerbarmenu__product-menu__hoodies product-menu__link product-menu__link_hoodies">Толстовки</a>
+            </nav>
+        </nav>
+
+        <nav class="footerbar">
+            <a href="" class="footerbarmenu main-menu main-menu__link main-menu__link_about-brand">О бренде</a>
+        </nav>
+
+        <nav class="footerbar">
+            <a href="" class="footerbarmenu main-menu main-menu__link main-menu__link_contacts">Контакты</a>
+        </nav>
+
+        <div class="footerbar footerbar__contacts">
             <div class="contacts__phone">
+                <p>+7 (495) 823-54-12</p>
             </div>
             <div class="contacts__e-mail">
+                <p>hello@womazing.com</p>
             </div>
             <div class="contacts__socials">
+                <img src="../icon/vk_social_media_logo_icon.svg" alt="vk">
+                <img src="../icon/telegram_social_media_logo_icon.svg" alt="telegram">
+                <img src="../icon/pinterest_logo_icon.svg" alt="pinterest">
             </div>
             <div class="contacts__payments">
             </div>
