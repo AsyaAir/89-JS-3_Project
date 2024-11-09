@@ -1,7 +1,7 @@
-// .brand,
-// .brand__container {
-//    border: 1px solid red;
-// }
+.brand,
+.brand__container {
+   border: 1px solid red;
+}
 
 // .brand__info-container {
 //    border: 1px solid yellow;
@@ -22,9 +22,24 @@
       // max-width: 1108px;
       // height: 487px;
       margin-top: 92px;
+
+      .brand__button-arrow {
+         border: none;
+         background-color: transparent;
+         padding: 20px;
+      }
    
       .brand__photo-container {
-         flex: 1; //чтобы занимать всё доступное пространство в контейнере
+         // flex: 1; //чтобы занимать всё доступное пространство в контейнере
+         position: relative;
+         width: 729px;
+         height: 487px;
+
+         .brand__photo {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+         }
       }
       
       .brand__info-container {

@@ -206,7 +206,7 @@ a {
   max-width: 1110px;
   min-width: 320px;
   margin: 0 auto;
-  padding: 0 32px;
+  // padding: 0 32px; // padding точно лишний
 
   @media screen and (max-width: 767px) {
     padding: 0 20px;
