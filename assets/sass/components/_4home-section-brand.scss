@@ -3,9 +3,9 @@
    border: 1px solid red;
 }
 
-.brand__info-container {
-   border: 1px solid yellow;
-}
+// .brand__info-container {
+//    border: 1px solid yellow;
+// }
 
 .brand {
    @extend %container;
@@ -22,6 +22,12 @@
       // max-width: 1108px;
       // height: 487px;
       margin-top: 92px;
+
+      .brand__button-arrow {
+         border: none;
+         background-color: transparent;
+         padding: 20px;
+      }
    
       .brand__photo-container {
          // flex: 1; //чтобы занимать всё доступное пространство в контейнере
