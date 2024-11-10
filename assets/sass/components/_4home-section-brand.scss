@@ -12,6 +12,7 @@
 
    display: flex;
    flex-direction: column;
+   margin-bottom: 92px;
    // width: 1110px;
    // max-width: 1110px;
 
@@ -39,6 +40,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
+            object-fit: cover;
          }
       }
       
