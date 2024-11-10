@@ -1,0 +1,51 @@
+.page-checkout {
+   @extend %container;
+   padding: 100px 0 100px 0;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+
+   .page-checkout__title {
+      margin: 0;
+   }
+
+   .page-checkout__container {
+      display: flex;
+      flex-direction: row;
+      margin: 75px 0 75px 0;
+      gap: 250px;
+
+      .page-checkout__forms,
+      .page-checkout__cart {
+         display: flex;
+         flex-direction: column;
+         gap: 50px;
+      }
+
+      .page-checkout__form,
+      .page-checkout__cart-sum,
+      .page-checkout__cart-paymethod {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+      }
+
+      // .page-checkout__cart-sum {
+      //    display: flex;
+      //    flex-direction: column;
+      //    justify-content: space-between;
+      // }
+
+      .page-checkout__cart-sum__string {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         padding: 10px 30px;
+         justify-content: space-between;
+      }
+
+      .page-checkout__cart-sum__result {
+         background-color: $background-beige-color;
+      }
+   }
+}
