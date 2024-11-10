@@ -1,7 +1,19 @@
+
 /* Стили для секции информации */
+.main {
+  display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
 .info-section {
-  flex: 1;
-  padding: 40px;
+  width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
 }
 
 .info-section__text-slider {
@@ -29,8 +41,18 @@
 }
 
 /* Буллиты для управления слайдером */
+// .info-section__scroll-bar {
+//   display: flex;
+//   gap: 8px;
+//   justify-content: center;
+//   margin-top: 20px;
+
+// }
 .info-section__scroll-bar {
-  display: flex;
+  // margin-top: auto;
+  // z-index: 10; /* или другое нужное значение */
+
+    display: flex;
   gap: 8px;
   justify-content: center;
   margin-top: 20px;
@@ -49,26 +71,51 @@
 }
 
 /* Секция фотографий */
+// .photo-section {
+//   flex: 1;
+//   position: relative;
+// }
+
 .photo-section {
-  flex: 1;
+  width: 50%;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+// .photo-section__background {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100vh;
+//   background-color: $background-beige-color;
+//   z-index: -1;
+// }
 
 .photo-section__background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  background-color: $background-beige-color;
-  z-index: -1;
+  height: 100%;
+  background-color: $background-beige-color; 
+  z-index: 1; /* Позволяет фону быть ниже остальных элементов */
+
+  margin-top: -200px;  // [высота header]
 }
 
+// .photo-section__slider {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100%;
+// }
+
 .photo-section__slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .photo-section__slider img {
@@ -78,4 +125,29 @@
 
 .photo-section__slider img.active {
   display: block;
+}
+
+.photo-section__static-images {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 3; /* Поверх слайдера */
+  transform: translateX(-50%);
+}
+
+.photo-section__static-image-left,
+.photo-section__static-image-right {
+    position: absolute;
+    top: 10%; /* позиция по вертикали */
+}
+
+.photo-section__static-image-left {
+    left: -10%; /* Положение левого изображения */
+}
+
+.photo-section__static-image-right {
+    right: -10%; /* Положение правого изображения */
 }
