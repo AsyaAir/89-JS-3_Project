@@ -1,5 +1,6 @@
 .page-checkout {
    @extend %container;
+   width: 70vw;
    padding: 100px 0 100px 0;
    display: flex;
    flex-direction: column;
@@ -30,13 +31,12 @@
          gap: 20px;
       }
 
-      // .page-checkout__cart-sum {
-      //    display: flex;
-      //    flex-direction: column;
-      //    justify-content: space-between;
-      // }
+      .page-checkout__cart-sum__subtitle,
+      .page-checkout__cart-paymethod {
+         padding-left: 30px;
+      }
 
-      .page-checkout__cart-sum__string {
+      .page-checkout__cart-sum__row {
          display: flex;
          flex-direction: row;
          align-items: center;
