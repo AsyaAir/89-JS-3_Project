@@ -160,19 +160,20 @@ a {
 //Womazing
 .logo {
   display: flex;
+  align-items: center;
   flex-shrink: 0;
   justify-content: space-between;
   width: 118px;
-  height: 18px;
+  height: 25px;
 
   font-weight: 700;
   line-height: 18px;
   letter-spacing: -0.56px;
-  font-size: 1.4em;
+  font-size: 0.9411764705882353em; // = 16px : 17px (было 1.4em)
   text-transform: uppercase;
 
   .logo__icon {
-    width: 19px;
+    width: 25px;
     height: 25px;
   }
 
