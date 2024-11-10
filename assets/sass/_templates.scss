@@ -68,11 +68,12 @@ a {
 
 //==================Заголовки====================//
 
-//этот шаблон можно добавить для заголовка "Новые поступления в этом сезоне"
+//этот шаблон можно добавить для заголовка h2 "Новые поступления в этом сезоне"
 .page-title {
   margin: auto;
-  margin-top: 186px;
-  font-family: "Raleway";
+  // margin-top: 186px; // это точно везде по-разному
+  // font-family: "Raleway";
+  font-family: $font-family;
   font-weight: 500;
   font-size: 3.235294117647059em; // = 55px : 17px (было 5.5em)
   line-height: 110%;
@@ -94,7 +95,7 @@ a {
   }
 }
 
-//этот шаблон можно добавить для заголовка "Новая коллекция"
+//этот шаблон можно добавить для заголовка h3 "Новая коллекция"
 .title {
   font-family: $font-family;
   font-weight: 500;
@@ -114,7 +115,7 @@ a {
   }
 }
 
-//этот шаблон можно добавить для заголовка "Качество" "Скорость" "Ответственность"
+//этот шаблон можно добавить для заголовка h4 "Качество" "Скорость" "Ответственность"
 .subtitle {
   font-family: $font-family;
   font-weight: 500;
@@ -160,19 +161,20 @@ a {
 //Womazing
 .logo {
   display: flex;
+  align-items: center;
   flex-shrink: 0;
   justify-content: space-between;
   width: 118px;
-  height: 18px;
+  height: 25px;
 
   font-weight: 700;
   line-height: 18px;
   letter-spacing: -0.56px;
-  font-size: 1.4em;
+  font-size: 0.9411764705882353em; // = 16px : 17px (было 1.4em)
   text-transform: uppercase;
 
   .logo__icon {
-    width: 19px;
+    width: 25px;
     height: 25px;
   }
 
@@ -185,8 +187,8 @@ a {
 //==================Кнопки====================//
 .button {
   padding: 22px 50px;
-  width: 268px;
-  height: 68px;
+  // width: 268px; // ширина везде разные
+  height: 68px; // высота везде одинаковая
   background: $main-color;
 
   font-family: $font-family;
@@ -196,8 +198,23 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
+  border: none;
 }
 //==================Конец Кнопки====================//
+
+//==================начало inputs====================//
+.input {
+  font-family: inherit;
+  border: none;
+  border-bottom: 1px solid grey;
+  padding: 15px 0 15px 0;
+  width: 350px;
+}
+
+.textarea {
+  height: 150px;
+}
+//==================Конец inputs====================//
 
 //================КОНЕЦ ОБЩИЕ СТИЛИ================//
 
