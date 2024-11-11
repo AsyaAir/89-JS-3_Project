@@ -136,7 +136,7 @@ a {
 //================Конец Заголовки==================//
 
 //===================Навигация=====================//
-.navbar__list {
+.main-menu__items {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -145,12 +145,8 @@ a {
 
   list-style: none;
 
-  .navbar__list-link {
-    font-size: 1.5em;
-  }
-
-  .navbar__list-link:hover {
-    opacity: 0.6;
+  .main-menu__link {
+    font-size: 0.8823529411764706em; //15px
   }
 }
 //===============Конец Навигация==================//
@@ -158,26 +154,19 @@ a {
 //====================Логотип=====================//
 
 //Womazing
-.logo {
+.logo__link {
   display: flex;
-  flex-shrink: 0;
   justify-content: space-between;
-  width: 118px;
-  height: 18px;
 
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: -0.56px;
-  font-size: 1.4em;
+  font-weight: 500;
+  font-size: 0.9411764705882353em; //16px
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  gap: 11px;
 
   .logo__icon {
-    width: 19px;
+    width: 25px;
     height: 25px;
-  }
-
-  .logo__icon_black {
-    fill: $text-basic-color;
   }
 }
 //==================Конец Логотип==================//
