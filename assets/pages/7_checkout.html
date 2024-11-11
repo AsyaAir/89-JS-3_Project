@@ -5,9 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../node_modules/normalize.css/">
     <link rel="stylesheet" href="../styles/checkout.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="shortcut icon" href="../icon/logo_womazing.svg" type="image/svg"/>
     <title>checkout</title>
 </head>
 <body>
+    <main class="page-checkout">
+        <h2 class="page-checkout__title page-title">Оформление заказа</h2>
+        <p>хлебные крошки</p>
+        <div class="page-checkout__container">
+            <div class="page-checkout__forms">
+                <form class="page-checkout__form" action="">
+                    <h4 class="subtitle">Напишите нам</h4>
+                    <input 
+                        type="text"
+                        class="page-checkout__input input"
+                        placeholder="Имя">
+                    <input 
+                        type="text"
+                        class="page-checkout__input input"
+                        placeholder="E-mail">
+                    <input 
+                        type="text"
+                        class="page-checkout__input input"
+                        placeholder="Телефон">
+                </form>
+                <form class="page-checkout__form" action="">
+                    <h4 class="subtitle">Адрес получателя</h4>
+                    <input 
+                        type="text"
+                        class="page-checkout__input input"
+                        placeholder="Страна">
+                    <input 
+                        type="text"
+                        class="page-checkout__input input"
+                        placeholder="Город">
+                    <input 
+                        type="text"
+                        class="page-checkout__input input"
+                        placeholder="Улица">
+                        <input 
+                        type="text"
+                        class="page-checkout__input input"
+                        placeholder="Дом">
+                    <input 
+                        type="text"
+                        class="page-checkout__input input"
+                        placeholder="Квартира">
+                </form>
+                <form class="page-checkout__form" action="">
+                    <h4 class="subtitle">Комментарии</h4>
+                    <textarea 
+                    name="" 
+                    id=""
+                    class="page-checkout__input page-checkout__textarea input textarea"
+                    placeholder="Комментарии"></textarea>
+                </form>
+            </div>
+            <div class="page-checkout__cart">
+                <div class="page-checkout__cart-sum">
+                    <h4 class="subtitle page-checkout__cart-sum__subtitle">Ваш заказ</h4>
+                    <div class="page-checkout__cart-sum__row">
+                        <p>Товар</p>
+                        <p>Всего</p>
+                    </div>
+                    <div class="page-checkout__cart-sum__row">
+                        <p>Товар 1</p>
+                        <p>20 руб.</p>
+                    </div>
+                    <div class="page-checkout__cart-sum__row">
+                        <p>Товар 2</p>
+                        <p>10 руб.</p>
+                    </div>
+                    <div class="page-checkout__cart-sum__row page-checkout__cart-sum__result">
+                        <p>Итого</p>
+                        <p>30 руб.</p>
+                    </div>
+                </div>
+                <div  class="page-checkout__cart-paymethod">
+                    <h4 class="subtitle">Способы оплаты</h4>
+                    <label for="input__cash" id="form__cash">
+                        <input 
+                            type="checkbox"
+                            name="cash" 
+                            id="input__cash" 
+                            required>
+                        Оплата наличными
+                    </label>
+                    <button class="button page-checkout__button">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </main>
     
+    <!-- Футер _footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <nav class="footerbar">
+                <div class="logo">
+                    <img class="logo__icon" src="../icon/logo_womazing.svg" alt="logo">
+                    <span>WOMASING</span>
+                </div>
+                <div class="policies">
+                    <p>© Все права защищены</p>
+                    <a href="">Политика конфиденциальности</a>
+                    <a href="">Публичная оферта</a>
+                </div>
+            </nav>
+            <nav class="footerbar">
+                <a href="./1_page_home.html" class="footerbarmenu main-menu main-menu__link main-menu__link_home">Главная</a>
+            </nav>
+            <nav class="footerbar">
+                <a href="./2_page_shop.html" class="footerbarmenu main-menu__link main-menu__link_shop">Магазин</a>
+                <nav class="footerbar__product-menu product-menu">
+                    <a href="" class="footerbarmenu__product-menu__coats product-menu__link product-menu__link_coats">Пальто</a>
+                    <a href="" class="footerbarmenu__product-menu__sweatshirts product-menu__link product-menu__link_sweatshirts">Свитшоты</a>
+                    <a href="" class="footerbarmenu__product-menu__cardigans product-menu__link product-menu__link_cardigans">Кардиганы</a>
+                    <a href="" class="footerbarmenu__product-menu__hoodies product-menu__link product-menu__link_hoodies">Толстовки</a>
+                </nav>
+            </nav>
+            <nav class="footerbar">
+                <a href="./4_about_brand.html" class="footerbarmenu main-menu main-menu__link main-menu__link_about-brand">О бренде</a>
+            </nav>
+            <nav class="footerbar">
+                <a href="./5_contacts.html" class="footerbarmenu main-menu main-menu__link main-menu__link_contacts">Контакты</a>
+            </nav>
+            <div class="footerbar footerbar__contacts">
+                <p class="contacts__phone">+7 (495) 823-54-12</p>
+                <p class="contacts__e-mail">hello@womazing.com</p>
+                <div class="contacts__socials">
+                    <img class="footerbar__contacts-socials" src="../icon/vk_social_media_logo_icon.svg" alt="vk">
+                    <img class="footerbar__contacts-socials" src="../icon/telegram_social_media_logo_icon.svg" alt="telegram">
+                    <img class="footerbar__contacts-socials" src="../icon/pinterest_logo_icon.svg" alt="pinterest">
+                </div>
+                <div class="contacts__payments"></div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
