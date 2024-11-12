@@ -72,7 +72,6 @@ a {
 .page-title {
   margin: auto;
   // margin-top: 186px; // это точно везде по-разному
-  // font-family: "Raleway";
   font-family: $font-family;
   font-weight: 500;
   font-size: 3.235294117647059em; // = 55px : 17px (было 5.5em)
@@ -85,12 +84,12 @@ a {
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 5.4em;
+    font-size: 3.176470588235294em;
     line-height: 64px;
   }
 
   @media screen and (max-width: 375px) {
-    font-size: 4em;
+    font-size: 2.3529411764705883em;
     line-height: 44px;
   }
 }
@@ -105,12 +104,12 @@ a {
   color: $text-basic-color;
 
   @media screen and (max-width: 768px) {
-    font-size: 4em;
+    font-size: 2.352941176470588em;
     line-height: 44px;
   }
 
   @media screen and (max-width: 375px) {
-    font-size: 2.4em;
+    font-size: 1.411764705882353em;
     line-height: 28px;
   }
 }
@@ -125,12 +124,12 @@ a {
   color: $text-basic-color;
 
   @media screen and (max-width: 768px) {
-    font-size: 2.8em;
+    font-size: 1.5625em;
     line-height: 32px;
   }
 
   @media screen and (max-width: 375px) {
-    font-size: 2.4em;
+    font-size: 1.411764705882353em;
     line-height: 28px;
   }
 }
