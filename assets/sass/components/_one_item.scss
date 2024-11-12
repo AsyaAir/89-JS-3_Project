@@ -1,3 +1,35 @@
+.main {
+    @extend %container;
+    display: flex;
+    width: 100%;
+    // height: 100vh;
+    position: relative;
+
+    .item-container {
+        display: flex;
+
+        .item-info-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+            .item-info-container__picture {
+                display: flex;
+            }
+
+            .item-info-container__other {
+                display: flex;
+            }
+            .related-items-container {
+                display: flex;
+            }
+        }
+
+        
+    }
+
+}
+
 .breadcrumb a {
     text-decoration: none;
 }

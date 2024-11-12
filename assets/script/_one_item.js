@@ -1,4 +1,7 @@
-const breadcrumbContainer = document.querySelector('.breadcrumb');
+const breadcrumbContainer = document.querySelector('.breadcrumbs');
+
+// Очистить контейнер перед добавлением
+breadcrumbContainer.innerHTML = '';
 
 const breadcrumbs = [
   { name: 'Главная', url: 'http://' },
@@ -20,7 +23,7 @@ breadcrumbs.forEach((crumb, index) => {
 
   if (index < breadcrumbs.length - 1) {
     const separator = document.createElement('span');
-    separator.textContent = ' > ';
+    separator.textContent = ' — ';
     breadcrumbContainer.appendChild(separator);
   }
 });
