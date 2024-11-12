@@ -1,0 +1,33 @@
+.header {
+  @extend %container;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 51px;
+}
+.logo {
+}
+.phone {
+  font-size: 0.8823529411764706em; //15px
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.phone__icon-wrap{
+  width: 27px;
+  height: 27px;
+}
+.phone__icon-wrap:hover{
+  background-color: $main-color;
+}
+.phone__icon{
+  width: 17px;
+  height: 17px;
+}
+.phone__icon:hover {
+  fill: white;
+}
+.cart {
+}

@@ -10,74 +10,154 @@
 <body>
     <header class="header">
         <div class="logo">
+            <a href="./1_page_home.html" class="logo-link">
+                <img src="../icon/logo_womazing.svg" alt="logo_womazing" class="logo-img">
+                Womazing
+            </a>
         </div>
         <nav class="main-menu">
             <ul>
-                <li class="main-menu__link main-menu__link_home"></li>
-                <li class="main-menu__link main-menu__link_shop"></li>
-                <li class="main-menu__link main-menu__link_about-brand"></li>
-                <li class="main-menu__link main-menu__link_contacts"></li>
+                <li class="main-menu__link main-menu__link_home">
+                    <a href="http://">Главная</a>
+                </li>
+                <li class="main-menu__link main-menu__link_shop">
+                    <a href="http://">Магазин</a>
+                </li>
+                <li class="main-menu__link main-menu__link_about-brand">
+                    <a href="http://">О бренде</a>
+                </li>
+                <li class="main-menu__link main-menu__link_contacts">
+                    <a href="http://">Контакты</a>
+                </li>
             </ul>
         </nav>
         <div class="phone">
+            <img src="../icon/telephone_icon.svg" alt="shopping_cart_icon" class="">
+            <a href="tel:+74958235412" class="phone">+7 (495) 823-54-12
+            </a>
         </div>
         <div class="cart">
+            <ul class="">
+                <li class="">
+                    <a href="" class="">
+                        <img src="../icon/shopping_cart_icon.svg" alt="shopping_cart_icon" class="">
+                    </a>
+                </li>
+            </ul>
         </div>
     </header>
     <main>
         <div class="item-container">
-            <h2 class="item-container__title"></h2>
-            <div class="item-container__breadcrumbs"></div>
+            <h2 class="item-container__title">Свитшот Sweet Shot</h2>
+            <div class="item-container__breadcrumbs">
+                
+                <nav class="breadcrumbs">
+                    <a href="http://" class="breadcrumb__path">Главная</a>
+                    <span class="breadcrumb"> — </span>
+                    <a href="http://" class="breadcrumb__path">Свитшоты</a>
+                    <span class="breadcrumb"> — </span>
+                    <span >Свитшот Sweet Shot</span>
+                </nav>
+
+            </div>
             <div class="item-info-container">
-                <div class="item-info-container__picture"></div>
+                <div class="item-info-container__picture">
+                    <img src="/images/one-item_sweatshot_sweet_shot.png" alt="Sweet Shot">
+                </div>
                 <div class="item-info-container__other">
-                    <div class="item-info-container__other item-info-container__other_price"></div>
-                    <div class="item-info-container__other item-info-container__other_size"></div>
-                    <div class="item-info-container__other item-info-container__other_color"></div>
-                    <div class="item-info-container__other item-info-container__other_add-to-cart"></div>
+                    <div class="item-info-container__other item-info-container__other_price">
+                        <div class="price-1">
+                            <p class="price">$311</p>
+                        </div>
+                        <div class="price-2">
+                            <p class="old price">$450</p>
+                        </div>
+                    </div>
+                    <div class="item-info-container__other item-info-container__other_size">
+                        <p>Выберите размер</p>
+                        <div></div>
+                    </div>
+                    <div class="item-info-container__other item-info-container__other_color">
+                        <p>Выберите цвет</p>
+                        <div></div>
+                    </div>
+                    <div class="item-info-container__other item-info-container__other_add-to-cart">
+                        <div class="quontity"></div>
+                        <button>Добавить в корзину</button>
+                    </div>
                 </div>
             </div>
-            <div class="related-item-container">
-                <h3 class="related-item-container__title"></h3>
-                <div class="item-card__container" id="item-card">
-                    <div class="item-card__container item-card__container_photo"></div>
-                    <p class="item-card__container item-card__container_title"></p>
-                    <div class="item-card__container item-card__container_price"></div>
+            <div class="related-items-container">
+                <h3 class="related-items-container__title">Связанные товары</h3>
+                <div class="related-items-container__items">
+                    <div class="item-card__container" id="item-card-1">
+                        <div class="item-card__container item-card__container_photo">
+                            <img src="../images/header_photos-products_one.png" alt="photo of product" class="photo">
+                        </div>
+                        <p class="item-card__container item-card__container_title">Футболка USA</p>
+                        <div class="item-card__container item-card__container_price">
+                            <p class="old price"></p>
+                            <p class="price">$129</p>
+                        </div>
+                    </div>
+                    <div class="item-card__container" id="item-card-1">
+                        <div class="item-card__container item-card__container_photo">
+                            <img src="../images/header_photos-products_two.png" alt="photo of product" class="photo">
+                        </div>
+                        <p class="item-card__container item-card__container_title">Купальник Glow</p>
+                        <div class="item-card__container item-card__container_price">
+                            <p class="old price"></p>
+                            <p class="price">$129</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
     </main>
     <footer class="footer">
-        <div class="logo">
-        </div>
-        <nav class="main-menu">
-            <ul>
-                <li class="main-menu__link main-menu__link_home"></li>
-                <li class="main-menu__link main-menu__link_shop"></li>
-                <li class="main-menu__link main-menu__link_about-brand"></li>
-                <li class="main-menu__link main-menu__link_contacts"></li>
-            </ul>
-        </nav>
-        <div class="policies">
-        </div>
-        <nav class="product-menu">
-            <ul>
-                <li class="product-menu__link product-menu__link_coats"></li>
-                <li class="product-menu__link product-menu__link_sweatshirts"></li>
-                <li class="product-menu__link product-menu__link_cardigans"></li>
-                <li class="product-menu__link product-menu__link_hoodies"></li>
-            </ul>
-        </nav>
-        <div class="contacts">
-            <div class="contacts__phone">
-            </div>
-            <div class="contacts__e-mail">
-            </div>
-            <div class="contacts__socials">
-            </div>
-            <div class="contacts__payments">
+        <div class="footer__container">
+            <nav class="footerbar">
+                <div class="logo">
+                    <img class="logo__icon" src="../icon/logo_womazing.svg" alt="logo">
+                    <span>WOMASING</span>
+                </div>
+                <div class="policies">
+                    <p>© Все права защищены</p>
+                    <a href="">Политика конфиденциальности</a>
+                    <a href="">Публичная оферта</a>
+                </div>
+            </nav>
+            <nav class="footerbar">
+                <a href="./1_page_home.html" class="footerbarmenu main-menu main-menu__link main-menu__link_home">Главная</a>
+            </nav>
+            <nav class="footerbar">
+                <a href="./2_page_shop.html" class="footerbarmenu main-menu__link main-menu__link_shop">Магазин</a>
+                <nav class="footerbar__product-menu product-menu">
+                    <a href="" class="footerbarmenu__product-menu__coats product-menu__link product-menu__link_coats">Пальто</a>
+                    <a href="" class="footerbarmenu__product-menu__sweatshirts product-menu__link product-menu__link_sweatshirts">Свитшоты</a>
+                    <a href="" class="footerbarmenu__product-menu__cardigans product-menu__link product-menu__link_cardigans">Кардиганы</a>
+                    <a href="" class="footerbarmenu__product-menu__hoodies product-menu__link product-menu__link_hoodies">Толстовки</a>
+                </nav>
+            </nav>
+            <nav class="footerbar">
+                <a href="./4_about_brand.html" class="footerbarmenu main-menu main-menu__link main-menu__link_about-brand">О бренде</a>
+            </nav>
+            <nav class="footerbar">
+                <a href="./5_contacts.html" class="footerbarmenu main-menu main-menu__link main-menu__link_contacts">Контакты</a>
+            </nav>
+            <div class="footerbar footerbar__contacts">
+                <p class="contacts__phone">+7 (495) 823-54-12</p>
+                <p class="contacts__e-mail">hello@womazing.com</p>
+                <div class="contacts__socials">
+                    <img class="footerbar__contacts-socials" src="../icon/vk_social_media_logo_icon.svg" alt="vk">
+                    <img class="footerbar__contacts-socials" src="../icon/telegram_social_media_logo_icon.svg" alt="telegram">
+                    <img class="footerbar__contacts-socials" src="../icon/pinterest_logo_icon.svg" alt="pinterest">
+                </div>
+                <div class="contacts__payments"></div>
             </div>
         </div>
     </footer>
+    <script src="../script/_one_item.js"></script>
 </body>
 </html>

@@ -1,0 +1,100 @@
+// body,
+// html {
+//     width: 100%;
+//     margin: 0;
+//     padding: 0;
+// }
+
+// body {
+//     max-width: 1500px;
+//     margin: 50px auto; /* центрируем контент */
+//     padding: 0 50px; /* Задаём минимальный отступ по бокам */
+//     box-sizing: border-box; /* Учитываем padding в общей ширине */
+//     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+//     background-color: aqua;
+// }
+
+.page-cart {
+   @extend %container;
+   width: 70vw;
+   padding: 100px 0 100px 0;
+   display: flex;
+   flex-direction: column;
+   // gap: 10px;
+
+   .page-cart__title {
+      margin: 0;
+   }
+
+   .page-cart__table {
+      width: 100%;
+      margin: 100px 0 50px 0;
+
+      .page-cart__table-row-names {
+         border-bottom: 1px solid grey;
+      }
+
+      .page-cart__table-row {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         padding: 20px 0;
+   
+         .page-cart__table-row-item{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            align-items: center;
+            width: 50%;
+         }
+   
+         .page-cart__table-img {
+            width: 136px;
+            height: 205px;
+            object-fit: cover;
+         }
+   
+         .page-cart__table-row-rest {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 15%;
+         }
+
+         .page-cart__table-cell-quantity {
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            border: 1px solid grey;
+         }
+      }
+   }
+
+   .page-cart__discount {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .page-cart__checkout {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 75px;
+
+      .page-cart__checkout-sum {
+         display: flex;
+         flex-direction: row;
+         gap: 50px;
+         align-items: center;
+         justify-content: space-between;
+         padding: 10px 30px;
+         margin: 0 20px;
+         background-color: $background-beige-color;
+      }
+
+      .page-cart__checkout-btn {
+         width: 270px;
+      }
+   }
+}

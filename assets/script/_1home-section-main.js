@@ -39,3 +39,44 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const textSlides = document.querySelectorAll(".info-section__text-slider .info-section__text");
+    const imageSlides = document.querySelectorAll(".photo-section__slider img");
+    const dots = document.querySelectorAll(".scroll-bar__dot");
+
+    let currentSlide = 0;
+
+    // Функция для обновления видимости слайдов
+    function updateSlides(index) {
+        // Обновляем текстовые слайды
+        textSlides.forEach(slide => slide.style.display = "none");
+        textSlides[index].style.display = "block";
+
+        // Обновляем фото слайды
+        imageSlides.forEach(slide => slide.style.display = "none");
+        imageSlides[index].style.display = "block";
+
+        // Обновляем активную точку
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[index].classList.add("active");
+
+        currentSlide = index;
+    }
+
+    // Устанавливаем начальные значения
+    updateSlides(currentSlide);
+
+    // Обработчик кликов по точкам
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            updateSlides(index);
+        });
+    });
+
+    // Автопрокрутка слайдов (опционально)
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % textSlides.length;
+        updateSlides(currentSlide);
+    }, 5000); // Меняет слайд каждые 5 секунд
+});

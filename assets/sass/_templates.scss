@@ -68,11 +68,12 @@ a {
 
 //==================Заголовки====================//
 
-//этот шаблон можно добавить для заголовка "Новые поступления в этом сезоне"
+//этот шаблон можно добавить для заголовка h2 "Новые поступления в этом сезоне"
 .page-title {
   margin: auto;
-  margin-top: 186px;
-  font-family: "Raleway";
+  // margin-top: 186px; // это точно везде по-разному
+  // font-family: "Raleway";
+  font-family: $font-family;
   font-weight: 500;
   font-size: 3.235294117647059em; // = 55px : 17px (было 5.5em)
   line-height: 110%;
@@ -94,7 +95,7 @@ a {
   }
 }
 
-//этот шаблон можно добавить для заголовка "Новая коллекция"
+//этот шаблон можно добавить для заголовка h3 "Новая коллекция"
 .title {
   font-family: $font-family;
   font-weight: 500;
@@ -114,7 +115,7 @@ a {
   }
 }
 
-//этот шаблон можно добавить для заголовка "Качество" "Скорость" "Ответственность"
+//этот шаблон можно добавить для заголовка h4 "Качество" "Скорость" "Ответственность"
 .subtitle {
   font-family: $font-family;
   font-weight: 500;
@@ -136,7 +137,7 @@ a {
 //================Конец Заголовки==================//
 
 //===================Навигация=====================//
-.navbar__list {
+.main-menu__items {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -145,12 +146,8 @@ a {
 
   list-style: none;
 
-  .navbar__list-link {
-    font-size: 1.5em;
-  }
-
-  .navbar__list-link:hover {
-    opacity: 0.6;
+  .main-menu__link {
+    font-size: 0.8823529411764706em; //15px
   }
 }
 //===============Конец Навигация==================//
@@ -158,26 +155,19 @@ a {
 //====================Логотип=====================//
 
 //Womazing
-.logo {
+.logo__link {
   display: flex;
-  flex-shrink: 0;
   justify-content: space-between;
-  width: 118px;
-  height: 18px;
 
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: -0.56px;
-  font-size: 1.4em;
+  font-weight: 500;
+  font-size: 0.9411764705882353em; //16px
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  gap: 11px;
 
   .logo__icon {
-    width: 19px;
+    width: 25px;
     height: 25px;
-  }
-
-  .logo__icon_black {
-    fill: $text-basic-color;
   }
 }
 //==================Конец Логотип==================//
@@ -185,8 +175,8 @@ a {
 //==================Кнопки====================//
 .button {
   padding: 22px 50px;
-  width: 268px;
-  height: 68px;
+  // width: 268px; // ширина везде разная
+  height: 68px; // высота везде одинаковая
   background: $main-color;
 
   font-family: $font-family;
@@ -196,8 +186,39 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
+  border: none;
+}
+
+.button-white {
+  padding: 15px 50px;
+  width: 270px;
+  height: 68px;
+  background-color: white;
+  border: 1px solid $background-main_accent_button-color;
+
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 139%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: $background-main_accent_button-color;
 }
 //==================Конец Кнопки====================//
+
+//==================начало inputs====================//
+.input {
+  font-family: inherit;
+  border: none;
+  border-bottom: 1px solid grey;
+  padding: 15px 0 15px 0;
+  width: 350px;
+}
+
+.textarea {
+  height: 150px;
+}
+//==================Конец inputs====================//
 
 //================КОНЕЦ ОБЩИЕ СТИЛИ================//
 
@@ -208,7 +229,7 @@ a {
   margin: 0 auto;
   // padding: 0 32px; // padding точно лишний
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 720px) {
     padding: 0 20px;
   }
 }
