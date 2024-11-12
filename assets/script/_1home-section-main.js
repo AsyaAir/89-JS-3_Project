@@ -1,82 +1,62 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const textTitles = document.querySelectorAll(".text-slider__title");
-    const textParagraphs = document.querySelectorAll(".text-slider__text");
-    const imageSlides = document.querySelectorAll(".photo-section__slider img");
-    const dots = document.querySelectorAll(".scroll-bar__dot");
+// Определяем элементы слайдера
+const textSlides = document.querySelectorAll('.text-slider__title, .text-slider__text');
+const imageSlides = document.querySelectorAll('.photo-section__slider img');
+const dots = document.querySelectorAll('.scroll-bar__dot');
 
-    let currentSlide = 0;
+let currentSlide = 0;
+const totalSlides = textSlides.length / 2; // половина элементов - заголовки, половина - текст
 
-    // Функция для обновления отображения слайдов и активного буллита
-    function updateSlides(index) {
-        // Обновление заголовков и текстов
-        textTitles.forEach((title, i) => {
-            title.classList.toggle("active", i === index);
-        });
-        textParagraphs.forEach((text, i) => {
-            text.classList.toggle("active", i === index);
-        });
+// Функция для показа слайда
+function showSlide(index) {
+  // Скрыть все слайды
+  textSlides.forEach((slide) => slide.style.display = 'none');
+  imageSlides.forEach((img) => img.style.display = 'none');
+  dots.forEach((dot) => dot.classList.remove('active'));
 
-        // Обновление фото слайдов
-        imageSlides.forEach((img, i) => {
-            img.classList.toggle("active", i === index);
-        });
+  // Показать текущий слайд
+  document.querySelector(`.text-slider__title[data-slide="${index}"]`).style.display = 'block';
+  document.querySelector(`.text-slider__text[data-slide="${index}"]`).style.display = 'block';
+  document.querySelector(`.photo-section__slider img[data-slide="${index}"]`).style.display = 'block';
+  dots[index].classList.add('active');
+}
 
-        // Обновление активного буллита
-        dots.forEach((dot, i) => {
-            dot.classList.toggle("active", i === index);
-        });
+// Функции для переключения слайдов
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  showSlide(currentSlide);
+}
 
-        currentSlide = index;
-    }
+function previousSlide() {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  showSlide(currentSlide);
+}
 
-    // Инициализация первого слайда
-    updateSlides(currentSlide);
+// Назначаем обработчик событий для стрелок навигации
+document.querySelector('.info-section__button-container_arrow img').addEventListener('click', nextSlide);
 
-    // Обработчики для кликов по буллитам
-    dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
-            updateSlides(index);
-        });
-    });
+// Инициализация слайдера
+showSlide(currentSlide);
+
+// Привязка точек индикатора прокрутки
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentSlide = index;
+    showSlide(currentSlide);
+  });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const textSlides = document.querySelectorAll(".info-section__text-slider .info-section__text");
-    const imageSlides = document.querySelectorAll(".photo-section__slider img");
-    const dots = document.querySelectorAll(".scroll-bar__dot");
 
-    let currentSlide = 0;
 
-    // Функция для обновления видимости слайдов
-    function updateSlides(index) {
-        // Обновляем текстовые слайды
-        textSlides.forEach(slide => slide.style.display = "none");
-        textSlides[index].style.display = "block";
 
-        // Обновляем фото слайды
-        imageSlides.forEach(slide => slide.style.display = "none");
-        imageSlides[index].style.display = "block";
 
-        // Обновляем активную точку
-        dots.forEach(dot => dot.classList.remove("active"));
-        dots[index].classList.add("active");
 
-        currentSlide = index;
-    }
 
-    // Устанавливаем начальные значения
-    updateSlides(currentSlide);
 
-    // Обработчик кликов по точкам
-    dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
-            updateSlides(index);
-        });
-    });
 
-    // Автопрокрутка слайдов (опционально)
-    setInterval(() => {
-        currentSlide = (currentSlide + 1) % textSlides.length;
-        updateSlides(currentSlide);
-    }, 5000); // Меняет слайд каждые 5 секунд
-});
+
+
+
+
+
+
+
