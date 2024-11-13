@@ -54,6 +54,7 @@
                 <li class="cart-item">
                     <a href="./6_cart.html" class="cart-item__link">
                         <img src="../icon/shopping_cart_icon.svg" alt="shopping_cart_icon" class="cart-item__img">
+                        <span class="cart-item__count">0</span> <!-- Добавление магии корзины -->
                     </a>
                 </li>
             </ul>
@@ -62,9 +63,9 @@
     <main>
         <div class="item-container">
             <h2 class="item-container__title page-title">Свитшот Sweet Shot</h2>
-            <div class="item-container__breadcrumbs">
+            <div class="item-container__breadcrumbs"> <!-- Навигация "Хлебные крошки" -->
                 <nav class="breadcrumbs">
-                    <a href="http://" class="breadcrumb__path">Главная</a>
+                    <a href="../pages/1_page_home.html" class="breadcrumb__path">Главная</a>
                     <span class="breadcrumb"> — </span>
                     <a href="http://" class="breadcrumb__path">Свитшоты</a>
                     <span class="breadcrumb"> — </span>
@@ -78,48 +79,56 @@
                 <div class="item-info-container__other">
                     <div class="item-info-container__other item-info-container__other_price">
                         <div class="price-1">
-                            <p class="price">$311</p>
+                            <p class="price" id="product-price">$311</p>
                         </div>
                         <div class="price-2">
-                            <p class="old price">$450</p>
+                            <p class="old price" id="product-old-price">$450</p>
                         </div>
                     </div>
                     <div class="item-info-container__other item-info-container__other_size">
                         <p>Выберите размер</p>
-                        <div></div>
+                        <div id="product-sizes"></div>
                     </div>
                     <div class="item-info-container__other item-info-container__other_color">
                         <p>Выберите цвет</p>
-                        <div></div>
+                        <div id="product-colors"></div>
                     </div>
                     <div class="item-info-container__other item-info-container__other_add-to-cart">
-                        <div class="quontity"></div>
-                        <button class="button">Добавить в корзину</button>
+                        <div class="quontity">
+                            <button class="quantity__decrease">-</button>
+                            <input type="number" class="quantity__input" value="1" min="1">
+                            <button class="quantity__increase">+</button>
+                        </div>
+                        <button class="button__add-to-cart button" id="add-to-cart-btn">Добавить в корзину</button>
                     </div>
                 </div>
             </div>
-            <div class="related-items-container">
-                <h3 class="related-items-container__title">Связанные товары</h3>
-                <div class="related-items-container__items">
-                    <div class="item-card__container" id="item-card-1">
-                        <div class="item-card__container item-card__container_photo">
-                            <img src="../images/header_photos-products_one.png" alt="photo of product" class="photo">
+        </div>
+        <div class="related-items-container">
+            <h3 class="related-items-container__title">Связанные товары</h3>
+            <div class="related-items-container__items">
+                <div class="item-card__container" id="item-card-1">
+                    <div class="item-card__container item-card__container_photo">
+                        <img src="../images/header_photos-products_one.png" alt="photo of product" class="photo" id="product-image">
+                    </div>
+                    <p class="item-card__container item-card__container_title">Футболка USA</p>
+                    <div class="item-card__container item-card__container_price">
+                        <div class="price-1">
+                            <p class="old price" id="product-old-price"></p>
                         </div>
-                        <p class="item-card__container item-card__container_title">Футболка USA</p>
-                        <div class="item-card__container item-card__container_price">
-                            <p class="old price"></p>
-                            <p class="price">$129</p>
+                        <div class="price-2">
+                            <p class="price" id="product-price">$129</p>
                         </div>
                     </div>
-                    <div class="item-card__container" id="item-card-1">
-                        <div class="item-card__container item-card__container_photo">
-                            <img src="../images/header_photos-products_two.png" alt="photo of product" class="photo">
-                        </div>
-                        <p class="item-card__container item-card__container_title">Купальник Glow</p>
-                        <div class="item-card__container item-card__container_price">
-                            <p class="old price"></p>
-                            <p class="price">$129</p>
-                        </div>
+                </div>
+                <div class="item-card__container" id="item-card-1">
+                    <div class="item-card__container item-card__container_photo">
+                        <img src="../images/header_photos-products_two.png" alt="photo of product" class="photo">
+                    </div>
+                    <p class="item-card__container item-card__container_title">Купальник Glow</p>
+                    <div class="item-card__container item-card__container_price">
+                        <p class="old price"></p>
+                        <p class="price">$129</p>
                     </div>
                 </div>
             </div>

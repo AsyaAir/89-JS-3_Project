@@ -41,3 +41,29 @@
 .breadcrumb span {
     margin: 0 5px;
 }
+
+.quantity {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity__decrease,
+  .quantity__increase {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .quantity__input {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 5px;
+  }
+
+  .button__add-to-cart {
+    width: 268px;
+  }

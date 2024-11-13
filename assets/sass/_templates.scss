@@ -208,3 +208,30 @@ a {
     padding: 0 20px;
   }
 }
+
+// Шаблон для "магии корзины" в Header
+.cart {
+  position: relative;
+}
+
+.cart-item__count {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -15px;
+  right: -15px;
+  border-radius: 50%;
+  width: 20px; 
+  height: 20px; 
+  background-color: $additional-accent-color;
+  color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-family: $font-family;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 100%;
+}
+
