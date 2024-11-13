@@ -23,16 +23,19 @@
                 <p class="page-cart__table-row-rest">Всего</p>
             </div>
             <div class="page-cart__table-row">
+                <!-- в этот div ^ должны вставляться товары по темплейту ниже -->
+                <!-- ниже темплейт -->
                 <div class="page-cart__table-row-item">
                     <p>x</p>
                     <img class="page-cart__table-img" src="../images/header_photos-products_one.png" alt="item">
-                    <p>Товар 1</p>    
+                    <p class="page-cart__item-name">Товар 1</p>    
                 </div>
-                <p class="page-cart__table-row-rest">10 &#8381;</p>
+                <p class="page-cart__table-row-rest page-cart__item-price">10 &#8381;</p>
                 <div class="page-cart__table-row-rest">
                     <p class="page-cart__table-cell-quantity">1</p>
                 </div>
-                <p class="page-cart__table-row-rest">10 &#8381;</p>
+                <p class="page-cart__table-row-rest page-cart__item-price-sum">10 &#8381;</p>
+                <!-- конец темплейта -->
             </div>
         </div>
         <div class="page-cart__discount">
@@ -48,7 +51,8 @@
         <div class="page-cart__checkout">
             <div  class="page-cart__checkout-sum">
                 <p class="subtitle">Итого:</p>
-                <p class="subtitle">10 &#8381;</p>
+                <!-- отсюда (ниже) берётся total для вставки на страницу checkout -->
+                <p class="subtitle page-cart__total">5000 &#8381;</p>
             </div>
             <button class="page-cart__checkout-btn button">Оформить заказ</button>
         </div>
@@ -99,5 +103,6 @@
         </div>
     </footer>
     
+    <script src="../script/_page-cart.js"></script>
 </body>
 </html>
