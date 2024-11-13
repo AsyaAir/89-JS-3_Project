@@ -1,33 +1,81 @@
 .header {
   @extend %container;
-
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 51px;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+
+  // outline: 1px #3e00ce solid;
 }
-.logo {
+
+.main-menu {
+  margin-right: 160px; //170px;
+
+  // outline: 1px #ceb300 solid;
+
+  @media screen and (max-width: 1155px) {
+    margin-right: 0px;
+  }
 }
+
+nav li {
+  transition: background-color 0.3s;
+
+  // outline: 1px #ce6a00 solid;
+}
+
+nav li.active {
+  background-color: #98FB98;
+}
+
 .phone {
   font-size: 0.8823529411764706em; //15px
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 9px;
+
+  margin-right: 60px; //67px;
+
+  // outline: 1px #00bdce solid;
+
+  @media screen and (max-width: 1155px) {
+    margin-right: 0px;
+  }
+
+  @media screen and (max-width: 810px) {
+
+  }
 }
 .phone__icon-wrap{
-  width: 27px;
-  height: 27px;
+  min-width: 27px;
+  min-height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .phone__icon-wrap:hover{
   background-color: $main-color;
 }
+
 .phone__icon{
-  width: 17px;
-  height: 17px;
+  max-width: 17px;
+  max-height: 17px;
 }
+
 .phone__icon:hover {
-  fill: white;
+  fill: #FFFFFF;
 }
+
 .cart {
+  display: flex;
+  column-gap: 145px;
+
+  // outline: 1px #00bdce solid;
 }
+

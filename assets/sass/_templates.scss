@@ -142,7 +142,7 @@ a {
   align-items: center;
   width: 400px;
   height: 21px;
-
+  gap: 45px;
   list-style: none;
 
   .main-menu__link {
@@ -154,6 +154,14 @@ a {
 //====================Логотип=====================//
 
 //Womazing
+.logo {
+  margin-right: 145px; //146px;
+
+  @media screen and (max-width: 1155px) {
+    margin-right: 0px;
+  }
+}
+
 .logo__link {
   display: flex;
   justify-content: space-between;
@@ -163,10 +171,12 @@ a {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   gap: 11px;
+  align-items: flex-end;
 
   .logo__icon {
     width: 25px;
     height: 25px;
+    object-fit: cover;
   }
 }
 //==================Конец Логотип==================//
@@ -228,7 +238,7 @@ a {
   margin: 0 auto;
   // padding: 0 32px; // padding точно лишний
 
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 1155px) {
     padding: 0 20px;
   }
 }
