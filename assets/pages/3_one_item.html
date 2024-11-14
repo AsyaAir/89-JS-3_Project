@@ -62,7 +62,9 @@
     </header>
     <main>
         <div class="item-container">
-            <h2 class="item-container__title page-title">Свитшот Sweet Shot</h2>
+            <div class="item-container__title">
+                <h2 class="page-title">Свитшот Sweet Shot</h2>
+            </div>
             <div class="item-container__breadcrumbs"> <!-- Навигация "Хлебные крошки" -->
                 <nav class="breadcrumbs">
                     <a href="../pages/1_page_home.html" class="breadcrumb__path">Главная</a>
@@ -74,10 +76,10 @@
             </div>
             <div class="item-info-container">
                 <div class="item-info-container__picture">
-                    <img src="../images/one-item_sweatshot_sweet_shot.png" alt="Sweet Shot">
+                    <img src="../images/one-item_sweatshot_sweet_shot.png" alt="Sweet Shot" class="one-item__img">
                 </div>
                 <div class="item-info-container__other">
-                    <div class="item-info-container__other item-info-container__other_price">
+                    <div class="item-info-container__other_price">
                         <div class="price-1">
                             <p class="price" id="product-price">$311</p>
                         </div>
@@ -87,93 +89,119 @@
                     </div>
                     <div class="item-info-container__other item-info-container__other_size">
                         <p>Выберите размер</p>
-                        <div id="product-sizes"></div>
+                        <div class="product-sizes-squares" id="product-sizes">
+                            <div class="product-sizes-squares-container">
+                                <div class="product-sizes-square product-sizes-squares__s_square">
+                                    <p>S</p>
+                                </div>
+                                <div class="product-sizes-square product-sizes-squares__m_square">
+                                    <p>M</p>
+                                </div>
+                                <div class="product-sizes-square product-sizes-squares__l_square">
+                                    <p>L</p>
+                                </div>
+                                <div class="product-sizes-square product-sizes-squares__xl_square">
+                                    <p>XL</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="item-info-container__other item-info-container__other_color">
                         <p>Выберите цвет</p>
-                        <div id="product-colors"></div>
+                        <div class="product-colors-circles" id="product-colors">
+                            <div class="product-colors-circles-container">
+                                <div class="product-colors-circle product-colors-circle__1_color"></div>
+                                <div class="product-colors-circle product-colors-circle__2_color"></div>
+                                <div class="product-colors-circle product-colors-circle__3_color"></div>
+                                <div class="product-colors-circle product-colors-circle__4_color"></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="item-info-container__other item-info-container__other_add-to-cart">
                         <div class="quontity">
-                            <button class="quantity__decrease">-</button>
                             <input type="number" class="quantity__input" value="1" min="1">
-                            <button class="quantity__increase">+</button>
                         </div>
-                        <button class="button__add-to-cart button" id="add-to-cart-btn">Добавить в корзину</button>
+                        <div class="button-add-to-cart__container">
+                            <button class="button__add-to-cart button" id="add-to-cart-btn">Добавить в корзину</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="related-items-container">
-            <h3 class="related-items-container__title">Связанные товары</h3>
-            <div class="related-items-container__items">
-                <div class="item-card__container" id="item-card-1">
-                    <div class="item-card__container item-card__container_photo">
-                        <img src="../images/header_photos-products_one.png" alt="photo of product" class="photo" id="product-image">
-                    </div>
-                    <p class="item-card__container item-card__container_title">Футболка USA</p>
-                    <div class="item-card__container item-card__container_price">
-                        <div class="price-1">
-                            <p class="old price" id="product-old-price"></p>
+            <div class="related-items-container__nested-container">
+                <h3 class="related-items-container__title title">Связанные товары</h3>
+                <div class="related-items-container__items">
+                    <div class="item-card__container" id="item-card-1">
+                        <div class="item-card__container item-card__container_photo">
+                            <img src="../images/header_photos-products_one.png" alt="photo of product" class="photo" id="product-image">
                         </div>
-                        <div class="price-2">
-                            <p class="price" id="product-price">$129</p>
+                        <div class="item-card__container item-card__container_title">
+                            <p class="item-card-title">Футболка USA</p>
+                        </div>
+                        <div class="item-card__container item-card__container_price">
+                            <div class="price-1">
+                                <p class="old price" id="product-old-price"></p>
+                            </div>
+                            <div class="price-2">
+                                <p class="price" id="product-price">$129</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="item-card__container" id="item-card-1">
-                    <div class="item-card__container item-card__container_photo">
-                        <img src="../images/header_photos-products_two.png" alt="photo of product" class="photo">
-                    </div>
-                    <p class="item-card__container item-card__container_title">Купальник Glow</p>
-                    <div class="item-card__container item-card__container_price">
-                        <p class="old price"></p>
-                        <p class="price">$129</p>
+                    <div class="item-card__container" id="item-card-1">
+                        <div class="item-card__container item-card__container_photo">
+                            <img src="../images/header_photos-products_two.png" alt="photo of product" class="photo">
+                        </div>
+                        <p class="item-card__container item-card__container_title">Купальник Glow</p>
+                        <div class="item-card__container item-card__container_price">
+                            <p class="old price"></p>
+                            <p class="price">$129</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
     </main>
     <footer class="footer">
         <div class="footer__container">
             <nav class="footerbar">
-                <div class="logo footer-logo">
+                <div class="footer-logo">
                     <img class="logo__icon" src="../icon/logo_womazing.svg" alt="logo">
                     <span>WOMASING</span>
                 </div>
-                <div class="policies">
+                <div class="footerbar__policies">
                     <p>© Все права защищены</p>
                     <a href="">Политика конфиденциальности</a>
                     <a href="">Публичная оферта</a>
                 </div>
             </nav>
             <nav class="footerbar">
-                <a href="./1_page_home.html" class="footerbarmenu main-menu main-menu__link main-menu__link_home">Главная</a>
+                <a href="./1_page_home.html" class="footerbarmenu">Главная</a>
             </nav>
             <nav class="footerbar">
-                <a href="./2_page_shop.html" class="footerbarmenu main-menu__link main-menu__link_shop">Магазин</a>
-                <nav class="footerbar__product-menu product-menu">
-                    <a href="" class="footerbarmenu__product-menu__coats product-menu__link product-menu__link_coats">Пальто</a>
-                    <a href="" class="footerbarmenu__product-menu__sweatshirts product-menu__link product-menu__link_sweatshirts">Свитшоты</a>
-                    <a href="" class="footerbarmenu__product-menu__cardigans product-menu__link product-menu__link_cardigans">Кардиганы</a>
-                    <a href="" class="footerbarmenu__product-menu__hoodies product-menu__link product-menu__link_hoodies">Толстовки</a>
+                <a href="./2_page_shop.html" class="footerbarmenu">Магазин</a>
+                <nav class="footerbar__product-menu">
+                    <a href="" class="footerbarmenu__product-menu-coats">Пальто</a>
+                    <a href="" class="footerbarmenu__product-menu-sweatshirts">Свитшоты</a>
+                    <a href="" class="footerbarmenu__product-menu-tshirts">Футболки</a>
+                    <a href="" class="footerbarmenu__product-menu-swimwear">Купальники</a>
                 </nav>
             </nav>
             <nav class="footerbar">
-                <a href="./4_about_brand.html" class="footerbarmenu main-menu main-menu__link main-menu__link_about-brand">О бренде</a>
+                <a href="./4_about_brand.html" class="footerbarmenu">О бренде</a>
             </nav>
             <nav class="footerbar">
-                <a href="./5_contacts.html" class="footerbarmenu main-menu main-menu__link main-menu__link_contacts">Контакты</a>
+                <a href="./5_contacts.html" class="footerbarmenu">Контакты</a>
             </nav>
             <div class="footerbar footerbar__contacts">
-                <p class="contacts__phone">+7 (495) 823-54-12</p>
-                <p class="contacts__e-mail">hello@womazing.com</p>
-                <div class="contacts__socials">
+                <p>+7 (495) 823-54-12</p>
+                <p>hello@womazing.com</p>
+                <div>
                     <img class="footerbar__contacts-socials" src="../icon/vk_social_media_logo_icon.svg" alt="vk">
                     <img class="footerbar__contacts-socials" src="../icon/telegram_social_media_logo_icon.svg" alt="telegram">
                     <img class="footerbar__contacts-socials" src="../icon/pinterest_logo_icon.svg" alt="pinterest">
                 </div>
-                <div class="contacts__payments"></div>
+                <div class="footerbar__payments"></div>
             </div>
         </div>
     </footer>
