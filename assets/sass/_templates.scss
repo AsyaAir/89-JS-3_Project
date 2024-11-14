@@ -123,7 +123,15 @@ a {
 
   @media screen and (max-width: 840px) {
     display: none;
-  }
+    min-width: 153px;
+    background-color: aqua;
+    flex-direction: column;
+    gap: 20px 0;
+    padding: 25px 35px 25px 45px;
+    position: absolute;
+    left: 0;
+    transform: translateY(-200%)
+  };
 
   .main-menu__link {
     font-size: 0.8823529411764706em; //15px
