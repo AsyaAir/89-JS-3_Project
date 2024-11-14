@@ -172,6 +172,10 @@ a {
   text-align: center;
   color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
   border: none;
+
+  &:hover { // добавила Настя
+    background: $background-main_accent_button-color !important; 
+  }
 }
 
 .button-white {
@@ -222,6 +226,7 @@ a {
 // Шаблон для "магии корзины" в Header
 .cart {
   position: relative;
+  // text-align: center;
 }
 
 .cart-item__count {
@@ -244,4 +249,5 @@ a {
   letter-spacing: 0.02em;
   line-height: 100%;
 }
+
 

@@ -17,37 +17,7 @@ function addToCart() {
 // Обработчик событий для кнопки добавления в корзину
 document.getElementById('add-to-cart-btn').addEventListener('click', addToCart);
 
-// 2. Реализация навигации "Хлебные крошки"
-const breadcrumbContainer = document.querySelector('.breadcrumbs');
-if (breadcrumbContainer) {
-  breadcrumbContainer.innerHTML = '';
-  const breadcrumbs = [
-    { name: 'Главная', url: './1_page_home.html' },
-    { name: 'Свитшоты', url: 'http://' },
-    { name: 'Свитшот Sweet Shot', url: '' } // Последний элемент без URL
-  ];
-
-  breadcrumbs.forEach((crumb, index) => {
-    if (crumb.url) {
-      const link = document.createElement('a');
-      link.href = crumb.url;
-      link.textContent = crumb.name;
-      breadcrumbContainer.appendChild(link);
-    } else {
-      const span = document.createElement('span');
-      span.textContent = crumb.name;
-      breadcrumbContainer.appendChild(span);
-    }
-
-    if (index < breadcrumbs.length - 1) {
-      const separator = document.createElement('span');
-      separator.textContent = ' — ';
-      breadcrumbContainer.appendChild(separator);
-    }
-  });
-}
-
-// 3. Загрузка JSON данных
+// 2. Загрузка JSON данных
 fetch('items.json')
   .then(response => response.json())
   .then(data => {
@@ -99,20 +69,3 @@ function addToCart(product) {
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartIcon();
 }
-
-// Обновление иконки корзины
-function updateCartIcon() {
-  const cart = JSON.parse(localStorage.getItem('cart')) || {};
-  const totalItems = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
-
-  const cartIcon = document.querySelector('.cart-item .cart-item__count');
-  if (totalItems > 0) {
-    cartIcon.textContent = totalItems;
-    cartIcon.style.display = 'block';
-  } else {
-    cartIcon.style.display = 'none';
-  }
-}
-
-// Инициализация количества товаров при загрузке страницы
-updateCartIcon();
