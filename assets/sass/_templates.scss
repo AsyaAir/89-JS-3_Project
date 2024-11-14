@@ -121,6 +121,10 @@ a {
   gap: 45px;
   list-style: none;
 
+  @media screen and (max-width: 840px) {
+    display: none;
+  }
+
   .main-menu__link {
     font-size: 0.8823529411764706em; //15px
   }
