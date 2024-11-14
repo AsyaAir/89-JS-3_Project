@@ -9,6 +9,7 @@
     <title>home</title>
 </head>
 <body>
+
     <!-- Шапка _header -->
     <header class="header">
         <div class="logo">
@@ -63,52 +64,53 @@
     </header>
 
     <main>
+    
         <!-- Секция 1 Новые поступления в этом сезоне с переходом в магазин через кнопку _1home-section-main -->
-        <div class="main">
-            <div class="info-section">
-                <div class="info-section__text-slider">
-                    <h2 class="text-slider__title title" data-slide="0">Новые поступления <br>в этом сезоне</h2>
-                    <h2 class="text-slider__title title" data-slide="1">Что-то новенькое <br>Мы заждались тебя</h2>
-                    <h2 class="text-slider__title title" data-slide="2">Включай новый  <br>сезон с WOMAZING</h2>
-                    <p class="text-slider__text" data-slide="0">Утонченные сочетания и бархатные <br>оттенки - вот то, что вы искали в этом <br>сезоне. Время исследовать.</p>
-                    <p class="text-slider__text" data-slide="1">Надоело искать себя в сером городе? <br>Настало время новых идей, свежих <br>красок и вдохновения с Womazing!</p>
-                    <p class="text-slider__text" data-slide="2">Мы обновили ассортимент - <br>легендарные коллекции и новинки от <br>отечественных дизайнеров</p>
+    <div class="main">
+        <div class="info-section">
+            <div class="info-section__text-slider">
+                <h2 class="text-slider__title title" data-slide="0">Новые поступления <br>в этом сезоне</h2>
+                <h2 class="text-slider__title title" data-slide="1">Что-то новенькое <br>Мы заждались тебя</h2>
+                <h2 class="text-slider__title title" data-slide="2">Включай новый  <br>сезон с WOMAZING</h2>
+                <p class="text-slider__text" data-slide="0">Утонченные сочетания и бархатные <br>оттенки - вот то, что вы искали в этом <br>сезоне. Время исследовать.</p>
+                <p class="text-slider__text" data-slide="1">Надоело искать себя в сером городе? <br>Настало время новых идей, свежих <br>красок и вдохновения с Womazing!</p>
+                <p class="text-slider__text" data-slide="2">Мы обновили ассортимент - <br>легендарные коллекции и новинки от <br>отечественных дизайнеров</p>
+            </div>
+            <div class="info-section__button-container">
+                <div class="info-section__button-container info-section__button-container_arrow">
+                    <img src="../icon/arrow_down.svg" alt="arrow down">
                 </div>
-                <div class="info-section__button-container">
-                    <div class="info-section__button-container info-section__button-container_arrow">
-                        <img src="../icon/arrow_down.svg" alt="arrow down">
-                    </div>
-                    <div class="info-section__button-container info-section__button-container_button">
-                        <button class="info-section__button info-section__button_open-shop button">Открыть магазин</button>
-                    </div>
-                </div>
-                <div class="info-section__scroll-bar">
-                    <span class="scroll-bar__dot" data-slide="0"></span>
-                    <span class="scroll-bar__dot" data-slide="1"></span>
-                    <span class="scroll-bar__dot" data-slide="2"></span>
+                <div class="info-section__button-container info-section__button-container_button">
+                    <button class="info-section__button info-section__button_open-shop button">Открыть магазин</button>
                 </div>
             </div>
-            <div class="photo-section">
-                <div class="photo-section__background"></div>
-                <div class="photo-section__slider">
-                    <img src="../images/homesec-main_1.png" alt="Woman in coat 1 with purple hair" data-slide="0">
-                    <img src="../images/item_coat_calm.png" alt="Woman in coat 2" data-slide="1">
-                    <img src="../images/item_coat_over.png" alt="Woman in coat 3" data-slide="2">
+            <div class="info-section__scroll-bar">
+                <span class="scroll-bar__dot" data-slide="0"></span>
+                <span class="scroll-bar__dot" data-slide="1"></span>
+                <span class="scroll-bar__dot" data-slide="2"></span>
+            </div>
+        </div>
+        <div class="photo-section">
+            <div class="photo-section__background"></div>
+            <div class="photo-section__slider">
+                <img src="../images/homesec-main_1.png" alt="Woman in coat 1 with purple hair" data-slide="0">
+                <img src="../images/item_coat_calm.jpg" alt="Woman in coat 2" data-slide="1">
+                <img src="../images/item_coat_over.jpg" alt="Woman in coat 3" data-slide="2">
+            </div>
+            <div class="photo-section__static-images">
+                <div class="photo-section__static-images photo-section_left-container">
+                    <img src="../images/homesec-main_2.png" alt="Static Image 1" class="photo-section__static-image-left">
                 </div>
-                <div class="photo-section__static-images">
-                    <div class="photo-section__static-images photo-section_left-container">
-                        <img src="../images/homesec-main_2.png" alt="Static Image 1" class="photo-section__static-image-left">
-                    </div>
-                    <div class="photo-section__static-images photo-section_right-container">
-                        <img src="../images/homesec-main_3.png" alt="Static Image 2" class="photo-section__static-image-right">
-                    </div>
+                <div class="photo-section__static-images photo-section_right-container">
+                    <img src="../images/homesec-main_3.png" alt="Static Image 2" class="photo-section__static-image-right">
                 </div>
             </div>
         </div>
+    </div>
 
         <!-- Секция 2 Новая коллекция с переходом в магазин через кнопку _2home-section-shop -->
         <div class="shop">
-            <h3 class="shop__title">Новая коллекция</h3>
+            <h3 class="shop__title" id="new collection">Новая коллекция</h3>
 
             <div class="item-card__container" id="item-card">
                 <div class="item-card__container item-card__container_photo">
@@ -231,5 +233,6 @@
     
     <script src="../script/_1home-section-main.js"></script>
     <script src="../script/_4home-section-brand-slider.js"></script>
+    <script src="../script/_update-items-on-icon-cart.js"></script>
 </body>
 </html>
