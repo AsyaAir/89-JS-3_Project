@@ -225,15 +225,36 @@ main {
     
 }
 
-.breadcrumb a {
-    text-decoration: none;
+.item-container__breadcrumbs {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .breadcrumbs {
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+    }
+
+    .breadcrumbs a {
+        color: $text-basic-color;
+        text-decoration: none;
+    }
+
+    .breadcrumbs a:hover {
+        text-decoration: underline;
+    }
+
+    .breadcrumb {
+        margin: 0 5px;
+        color: $text-current_navigation_path-color;
+        text-decoration: none;
+    }
 }
 
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
 
-.breadcrumb span {
-    margin: 0 5px;
-}
+
+
+
 
