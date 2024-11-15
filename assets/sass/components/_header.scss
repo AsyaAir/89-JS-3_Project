@@ -23,6 +23,11 @@
   }
 }
 
+.main-menu.main-menu__burger_open {
+  display: flex; // или другой стиль для отображения меню
+  transform: translateY(0); // Вернуть в исходное состояние
+}
+
 .main-menu__btn_burger {
   display: none;
   width: 30px;
@@ -48,9 +53,10 @@
 .main-menu__items.main-menu__open {
   display: flex; 
   flex-direction: column;
-  width: 300px;
+  width: 50px;
+  height: auto;
   position: absolute;
-  left: 50%;
+  left: 0;
   transform: translateX(-50%);
   top: calc(100% + 10px);
   z-index: 1000;
