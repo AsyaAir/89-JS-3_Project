@@ -2,6 +2,11 @@
   @extend %container;
 }
 
+.item-card {
+  display: flex;
+  gap: 30px;
+}
+
 .item-card__container {
   max-width: 350px;
   margin-top: 92px;
