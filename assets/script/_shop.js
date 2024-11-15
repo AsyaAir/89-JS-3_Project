@@ -145,21 +145,31 @@ const products = [
     }  
 ]
 
+    const itemCardContainer = document.getElementById('item-card');
+    
+    products.forEach((product, index) => {
+        const cardProduct = document.createElement('div');
+        cardProduct.className = 'item-card__container';
+    
+        cardProduct.innerHTML = `
+            <div class="item-card__container item-card__container_photo">
+                <img src="${product.image}" alt="${product.name}">
+            </div>
+            <h4 class="card-title item-card__container item-card__container_title">${product.name}</h4>
+            <div class="item-card__container item-card__container_price">${product.discounted_price} <del>${product.price}</del></div>
+        `;
+    
+        itemCardContainer.appendChild(cardProduct);
+    });
 
-const itemCardContainer = document.getElementById('item-card');
+// переход на страницу товара one_item
+function viewProduct(index) {
+    localStorage.setItem('selectedProductIndex', index);
+    window.location.href = './3_one_item.html';
+};
 
-products.forEach((product, index) => {
-    const cardProduct = document.createElement('div');
-    cardProduct.className = 'item-card__container';
-
-    cardProduct.innerHTML = `
-        <div class="item-card__container item-card__container_photo">
-            <img src="${product.image}" alt="${product.name}">
-        </div>
-        <h4 class="card-title item-card__container item-card__container_title">${product.name}</h4>
-        <div class="item-card__container item-card__container_price">${product.discounted_price} <del>${product.price}</del></div>
-    `;
-
-    itemCardContainer.appendChild(cardProduct);
-});
-
+// фильтр товаров
+function filterProducts(category) {
+    const filteredProducts = category === 'all' ? products : products.filter(product => product.category === category);
+    displayProducts(filteredProducts);
+}
