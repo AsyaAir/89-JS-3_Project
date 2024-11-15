@@ -1,5 +1,9 @@
 // 1. Начальное количество товаров и функция обновления счётчика
 let cartItemsCount = 0;
+const btnMakeOrder = document.querySelector('.page-cart__checkout-btn');
+if (btnMakeOrder) {
+    // Привязка обработчика событий
+} 
 
 function updateCartCount(count) {
   const cartCountElement = document.querySelector('.cart-item__count');
@@ -57,8 +61,12 @@ fetch('items.json')
   .catch(error => console.error('Ошибка загрузки данных:', error));
 
 // Функция добавления товара в корзину
-function addToCart(product) {
+function addToCart(product = null) {
   let cart = JSON.parse(localStorage.getItem('cart')) || {};
+  if (!product) {
+    console.error('Product not found');
+    return;
+}
 
   if (cart[product.name]) {
     cart[product.name].quantity += 1;

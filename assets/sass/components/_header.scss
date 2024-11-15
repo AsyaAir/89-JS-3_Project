@@ -19,6 +19,7 @@
 
   @media screen and (max-width: 840px) {
     order: 1;
+    position: relative;
   }
 }
 
@@ -49,6 +50,17 @@
   background-color: $text-basic-color;
 }
 
+.main-menu__items.main-menu__open {
+  display: flex; 
+  flex-direction: column;
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(100% + 10px);
+  z-index: 1000;
+}
+
 .phone {
   font-size: 0.8823529411764706em; //15px
   cursor: pointer;
@@ -66,6 +78,7 @@
     justify-content: space-evenly
   }
 }
+
 .phone__icon-wrap{
   min-width: 27px;
   min-height: 27px;
@@ -84,11 +97,16 @@
 }
 
 .phone__icon:hover {
-  fill: #FFFFFF;
+  fill: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
+  z-index: 50;
 }
 
 .cart {
   display: flex;
   column-gap: 145px;
+}
+
+.active {
+  color: #088178;
 }
 

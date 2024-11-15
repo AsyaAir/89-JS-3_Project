@@ -184,6 +184,7 @@ a {
   text-align: center;
   color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
   border: none;
+  cursor: pointer; // добавила Настя
 
   &:hover { // добавила Настя
     background: $background-main_accent_button-color !important; 

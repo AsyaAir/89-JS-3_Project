@@ -14,7 +14,7 @@
       display: flex;
       flex-direction: row;
       margin: 75px 0 75px 0;
-      gap: 250px;
+      justify-content: space-between;
 
       .page-checkout__forms,
       .page-checkout__cart {
@@ -36,9 +36,11 @@
          padding-left: 30px;
       }
 
-      .page-checkout__cart-sum__row {
+      .page-checkout__cart-sum__row,
+      .page-checkout__cart-sum__row-content {
          display: flex;
          flex-direction: row;
+         gap: 75px;
          align-items: center;
          padding: 10px 30px;
          justify-content: space-between;
