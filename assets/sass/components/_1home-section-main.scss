@@ -1,11 +1,9 @@
 .main {
-  max-width: 1110px;
-  min-width: 320px;
-  margin: 0 auto;
+  @extend %container;
   display: flex;
   width: 100%;
-  margin-top: 40px;
-  margin-bottom: 80px;
+  margin-top: 30px;
+  margin-bottom: 60px;
 
   .info-section {
     display: flex;
@@ -22,9 +20,7 @@
     .text-slider__text-container {
       display: flex;
       justify-content: flex-end;
-      padding: 20px;
-      padding-right: 60px;
-
+      padding: 20px 60px 20px 20px;
     }
   }
 
@@ -32,8 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 40px;
-    padding-right: 60px;
+    padding: 40px 60px 40px 40px;
     // margin-top: 30px; // Aligns with the image section on the right
   }
 
@@ -42,7 +37,7 @@
       justify-content: center;
       align-items: center;
   
-      .info-section__button-container_arrow{
+      .info-section__button-container_arrow {
         width: 67px;
         height: 67px;
         background-color: $background-arrow-style;
@@ -171,3 +166,146 @@
         //     }
         //   }
         // }
+// Медиа-запрос для экранов шириной в диапазоне 430-720px
+@media screen and (min-width: $mobile-size) and (max-width: $tablet-size) {
+  .title {
+    font-size: 2em;
+    line-height: 40px;
+  }
+
+  .text-slider__text {
+    font-size: 1.1em;
+    line-height: 44px;
+  }
+
+  .info-section__button_open-shop button {
+    font-size: 15px;
+    line-height: 100%;
+  }
+  
+  .info-section__scroll-bar {
+    margin-top: 60px;
+
+    .scroll-bar__dot {
+      width: 20px;
+      height: 3px;
+    }
+  }
+
+  .photo-section,
+  .nested-container,
+  .photo-section__slider {
+    display: block;
+    max-width: 100%;
+  }
+
+  .photo-section__background {
+    top: -20%;
+  }
+}
+  // Медиа-запрос для экранов мобильных телефонов шириной 430px и меньше - Настя
+  @media (max-width: 430px) {
+    .text-slider__title {
+      font-size: 2.352941176470588em;
+      line-height: 44px;
+    }
+  
+    .text-slider__text {
+      font-size: 2.352941176470588em;
+      line-height: 44px;
+    }
+  
+    .info-section__button_open-shop button {
+      font-size: 2.352941176470588em;
+      line-height: 44px;
+    }
+    
+    .info-section__scroll-bar {
+      margin-top: 100px;
+  
+      .scroll-bar__dot {
+        width: 20px;
+        height: 3px;
+      }
+    }
+  
+    .photo-section,
+    .nested-container,
+    .photo-section__slider {
+      display: block;
+      max-width: 100%;
+    }
+  
+    .photo-section__background {
+      top: -20%;
+    }
+    
+
+
+    .info-section__button-container_arrow,
+    .photo-section__static-images {
+      display: none;
+    }
+    
+    .main {
+      width: 100%;
+      flex-direction: column;
+    }
+
+
+    // .greeting-area-button-container__button_order-here-arrow {
+    //     display: block;
+    //     font-size: 16px;
+    //     font-weight: 400;
+    // }
+
+    // .about-us-pic {
+    //     max-width: 380px;
+    //     max-height: 277px;
+    // }
+    // .about-us-pic__image_cup {
+    //     width: 100%;
+    //     display: block;
+    //     stroke-width: 4px;
+    //     stroke: $secondary---hard-green; // смена цвета картинки по макету Figma для .svg картинки
+    //     bottom: 3%;
+    //     left: 3%;
+    // }
+    // .about-us-pic__rectangle {
+    //     width: 390px;
+    //     height: 248px;
+    //     position: absolute;
+    // }
+    // .about-us-text,
+    // .promotion-text {
+    //     width: 100%;
+    //     margin: 0;
+    //     padding: 20px;
+    // }
+    // .promotion-pic__rectangle {
+    //     width: 375px;
+    //     height: 320px;
+    //     position: absolute;
+    // }
+    // .promotion-pic__image_big-cup {
+    //     width: 100%;
+    //     display: block;
+    //     left: 23%;
+    // }
+
+    // .map-2 {
+    //     display: block;
+    // }
+    // .map-2__picture,
+    // .map-2 {
+    //     max-width: 100%;
+    // }
+    // .addresses {
+    //     align-items: center;
+    // }
+    // .addresses__button-container {
+    //     display: block;
+        
+
+    // }
+}

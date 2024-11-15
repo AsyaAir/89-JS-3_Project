@@ -55,19 +55,19 @@ a {
   letter-spacing: 0.02em;
   color: $text-basic-color;
 
-  @media screen and (max-width: 1024px) {
-    line-height: 70px;
-  }
+  // @media screen and (max-width: 1024px) {
+  //   line-height: 70px;
+  // }
 
-  @media screen and (max-width: 768px) {
-    font-size: 3.176470588235294em;
-    line-height: 64px;
-  }
+  // @media screen and (max-width: 768px) {
+  //   font-size: 3.176470588235294em;
+  //   line-height: 64px;
+  // }
 
-  @media screen and (max-width: 375px) {
-    font-size: 2.3529411764705883em;
-    line-height: 44px;
-  }
+  // @media screen and (max-width: 375px) {
+  //   font-size: 2.3529411764705883em;
+  //   line-height: 44px;
+  // }
 }
 
 //этот шаблон можно добавить для заголовка h3 "Новая коллекция"
@@ -79,15 +79,15 @@ a {
   letter-spacing: 0.02em;
   color: $text-basic-color;
 
-  @media screen and (max-width: 768px) {
-    font-size: 2.352941176470588em;
-    line-height: 44px;
-  }
+  // @media screen and (max-width: 768px) {
+  //   font-size: 2.352941176470588em;
+  //   line-height: 44px;
+  // }
 
-  @media screen and (max-width: 375px) {
-    font-size: 1.411764705882353em;
-    line-height: 28px;
-  }
+  // @media screen and (max-width: 375px) {
+  //   font-size: 1.411764705882353em;
+  //   line-height: 28px;
+  // }
 }
 
 //этот шаблон можно добавить для заголовка h4 "Качество" "Скорость" "Ответственность"
