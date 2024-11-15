@@ -31,9 +31,6 @@ function previousSlide() {
   showSlide(currentSlide);
 }
 
-// Назначаем обработчик событий для стрелок навигации
-document.querySelector('.info-section__button-container_arrow img').addEventListener('click', nextSlide);
-
 // Инициализация слайдера
 showSlide(currentSlide);
 
@@ -42,5 +39,15 @@ dots.forEach((dot, index) => {
   dot.addEventListener('click', () => {
     currentSlide = index;
     showSlide(currentSlide);
+    resetAutoSlide(); // Сбрасываем авто-слайд при клике на точку
   });
 });
+
+// Добавляем авто-слайд с интервалом
+let autoSlideInterval = setInterval(nextSlide, 5000); // меняет слайд каждые 5 секунд
+
+// Функция для сброса авто-слайда при ручном управлении
+function resetAutoSlide() {
+  clearInterval(autoSlideInterval);
+  autoSlideInterval = setInterval(nextSlide, 5000); // снова запускаем авто-слайд
+}
