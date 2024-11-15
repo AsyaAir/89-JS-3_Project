@@ -1,8 +1,9 @@
 .main {
-  @extend %container;
+  max-width: 1110px;
+  min-width: 320px;
+  margin: 0 auto;
   display: flex;
   width: 100%;
-  // position: relative;
   margin-top: 90px;
   margin-bottom: 80px;
 
@@ -11,60 +12,60 @@
     flex: 1;
     width: 50%;
     flex-direction: column;
-    }
+    margin-right: 20px;
+  }
 
   .info-section__text-slider {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-      .text-slider__text-container {
-        display: flex;
-        justify-content: flex-end;
-        padding: 60px;
-      }
+    .text-slider__text-container {
+      display: flex;
+      justify-content: flex-end;
+      padding: 60px;
+    }
   }
 
   .button-and-scroll-bar-container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 80px;
+    // margin-top: 30px; // Aligns with the image section on the right
+  }
 
     .info-section__button-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   
-        .info-section__button-container_arrow{
-          width: 67px;
-          height: 67px;
-          background-color: $background-arrow-style;
-          }
+      .info-section__button-container_arrow{
+        width: 67px;
+        height: 67px;
+        background-color: $background-arrow-style;
+      }
   
-        .info-section__button-container_button {
-          max-width: 243px;
+      .info-section__button-container_button {
+        max-width: 243px;
   
-          .info-section__button {
-            padding: 10px 20px;
-            background-color: $main-color;
-            color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
-            border: none;
-            cursor: pointer;
-          }
+        .info-section__button {
+          padding: 10px 20px;
+          background-color: $main-color;
+          color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
+          border: none;
+          cursor: pointer;
         }
       }
-    }
+  } 
+}
 
   .info-section__scroll-bar {
-        // margin-top: auto;
-        // z-index: 10; 56
+    // margin-top: auto;
+    // z-index: 10; 56
     display: flex;
     gap: 8px;
     justify-content: center;
-    margin-top: 50px;
-
-
-    }
+    margin-top: 100px;
   }
 
   .scroll-bar__dot {
@@ -90,7 +91,7 @@
       max-width: 550px;
       width: 100%;
     }
-    }
+  }
 
     .nested-container__background-photo-slider {
       flex: 1;
@@ -102,12 +103,12 @@
       .photo-section__background {
         position: absolute;
         min-width: 50px;
-        min-height: 930px;
+        min-height: 810px;
         width: 100%;
         height: 110%;
         background-color: $background-beige-color; 
-        z-index: -1; /* Позволяет фону быть ниже остальных элементов */
-        top: -40%;
+        z-index: -1; 
+        top: -40%; // Adjusts to meet the header's top
         left: 0;
         // margin-top: -200px;  // [высота header]
         // right: 0;
@@ -116,64 +117,54 @@
 
       .photo-section__slider {
         width: 100%;
-        max-width: 410px;
+        max-width: 400px;
         position: relative;
         z-index: 2;
+        // padding-left: 50px;  // Controls horizontal positioning within the section
         // left: ;
         // right: ;
         // top: -10%;
-      }
 
-      .photo-section__slider img {
-        display: none;
-        max-width: 75%;
-      }
-      
-      .photo-section__slider img.active {
-        display: block;
-      }
-    }
-
-
-
-      
-    .photo-section__static-images {
-      display: flex;  
-      flex: 1;
-        // position: relative;
-        // min-width: 600px;
-        // min-height: 800px;
-        
-        position: absolute;
-        // // top: 0;
-        // left: 50%;
-        // width: 100%;
-        // justify-content: space-between;
-        z-index: 3; // Поверх слайдера //
-        // transform: translateX(-60%);
-
-      
+        img {
+          display: none;
+          max-width: 75%;
         }
 
-
-    .photo-section_left-container {
-      // top: 61%;
-      // right: -20%;
-      // display: flex;
-      // justify-content: flex-start;
+        img.active {
+          display: block;
+        }
+      }
     }
 
-    // .photo-section_right-container {
-    //   top: 10%;
-    //   right: 20%;
-    //   display: flex;
-    //   justify-content: flex-end;
-    // }
+    .photo-section__static-images {
+      display: flex;  
+      position: absolute;
+      top: 150px;  // Adjust vertical alignment relative to slider image
+      z-index: 3; // Поверх слайдера //
+      // transform: translateX(-60%);
+
+      &.photo-section_left-container {
+        left: -40px;  // Adjust horizontal position for left image
+        // top: 50%;     // Center align or adjust as needed
+      }
+      
+      &.photo-section_right-container {
+        right: -470px;  // Adjust horizontal position for right image
+        top: 100%;      // Adjust vertical position
+      }
+      
+      .photo-section__static-image-left, 
+      .photo-section__static-image-right {
+        max-width: 150px; // Size control for static images
+      }
+    }
 
     
-    .photo-section__static-image-left,
-    .photo-section__static-image-right {
-      position: absolute;
-      // top: 20%; // позиция по вертикали //
-    }
-
+        // @media (max-width: 768px) {
+        //   .main {
+        //     flex-direction: column;
+        //     .info-section, .photo-section {
+        //       width: 100%;
+        //     }
+        //   }
+        // }
