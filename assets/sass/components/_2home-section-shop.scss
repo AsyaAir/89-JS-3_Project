@@ -1,0 +1,44 @@
+.shop {
+  @extend %container;
+}
+
+.item-card__container {
+  max-width: 350px;
+  margin-top: 92px;
+  gap: 30px;
+}
+
+.item-card__container_photo {
+  max-width: 350px;
+  height: 478px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.item-card__container_title {
+  margin-top: 24px;
+}
+
+.item-card__container_price {
+  margin-top: 7px;
+
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: $text-old_price-color;
+}
+
+.shop__button {
+  margin-top: 65px;
+  display: flex; 
+  justify-content: center;
+  margin-bottom: 130px;
+  cursor: pointer;
+} 
+
+.shop__button_open-shop:hover {
+  background-color: $main-color;
+  color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
+}

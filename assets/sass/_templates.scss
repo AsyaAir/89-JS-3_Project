@@ -109,6 +109,15 @@ a {
     line-height: 28px;
   }
 }
+
+.card-title {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: $text-basic-color;
+}
 //================Конец Заголовки==================//
 
 //===================Навигация=====================//
@@ -124,7 +133,7 @@ a {
   @media screen and (max-width: 840px) {
     display: none;
     min-width: 153px;
-    background-color: aqua;
+    background-color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
     flex-direction: column;
     gap: 20px 0;
     padding: 25px 35px 25px 45px;
@@ -205,6 +214,7 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: $background-main_accent_button-color;
+  align-items: center;
 }
 //==================Конец Кнопки====================//
 
