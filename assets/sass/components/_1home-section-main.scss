@@ -4,7 +4,7 @@
   margin: 0 auto;
   display: flex;
   width: 100%;
-  margin-top: 90px;
+  margin-top: 40px;
   margin-bottom: 80px;
 
   .info-section {
@@ -22,7 +22,9 @@
     .text-slider__text-container {
       display: flex;
       justify-content: flex-end;
-      padding: 60px;
+      padding: 20px;
+      padding-right: 60px;
+
     }
   }
 
@@ -30,7 +32,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 80px;
+    padding: 40px;
+    padding-right: 60px;
     // margin-top: 30px; // Aligns with the image section on the right
   }
 
@@ -103,12 +106,12 @@
       .photo-section__background {
         position: absolute;
         min-width: 50px;
-        min-height: 810px;
+        min-height: 610px;
         width: 100%;
         height: 110%;
         background-color: $background-beige-color; 
         z-index: -1; 
-        top: -40%; // Adjusts to meet the header's top
+        top: -25%; // Adjusts to meet the header's top
         left: 0;
         // margin-top: -200px;  // [высота header]
         // right: 0;
@@ -139,7 +142,7 @@
     .photo-section__static-images {
       display: flex;  
       position: absolute;
-      top: 150px;  // Adjust vertical alignment relative to slider image
+      top: 110px;  // Adjust vertical alignment relative to slider image
       z-index: 3; // Поверх слайдера //
       // transform: translateX(-60%);
 
@@ -159,7 +162,7 @@
       }
     }
 
-    
+
         // @media (max-width: 768px) {
         //   .main {
         //     flex-direction: column;
