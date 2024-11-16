@@ -153,7 +153,7 @@ const createCard = (obj) => {
             <div class="item-card__container item-card__container_photo">
                 <img src="${obj.image}" alt="${obj.name}">
                 <div class="item-card__overlay">
-                    <a href="#" class="item-card__container item-card__container_arrow">
+                    <a href="./assets/script/_one_item.js" class="item-card__container item-card__container_arrow">
                         <img src="../icon/arrow-wight_right.svg" alt="arrow_right">
                     </a>
                 </div>
@@ -166,7 +166,7 @@ const createCard = (obj) => {
     `;
 
     return card;
-    }
+}
 
 const shopCardsContainer = document.querySelector('.shop-container__cards');
 products.forEach((element) => {
@@ -181,3 +181,66 @@ const countElement = document.getElementById('count');
 totalCountElement.textContent = products.length;
 countElement.textContent = products.length; // показано кол-во
 
+// =============== другой варинт ===============
+
+//получение данных из API
+async function fetchProducts() {
+    const response = await fetch('https://fakestoreapi.com/products');
+    const data = await response.json();
+    return data;
+}
+
+//отображение товаров на странице
+function createCards(products, category) {
+    const container = document.querySelector('.shop-container__cards');
+    container.innerHTML = ''; 
+
+    filterProducts.forEach(product => {
+        const itemCard = document.createElement('div');
+        itemCard.className = 'item-card';
+        itemCard.innerHTML = `
+            <div class="item-card__container" id="item-card">
+                <div class="item-card__container item-card__container_photo">
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="item-cardoverlay">
+                        <a href="./assets/script/_one_item.js" class="item-cardc__ontainer item-card__container_arrow">
+                            <img src="../icon/arrow-wight_right.svg" alt="arrow_right">
+                        </a>
+                    </div>
+                </div>
+                <h4 class="card-title item-cardcontainer item-cardcontainer_title">${product.name}</h4>
+                <div class="item-cardcontainer item-card__container_price">$${product.price} $${product.discounted_price}</div>
+            </div>
+        `;
+        container.appendChild(itemCard);
+    });
+
+    // счетчик товаров
+    document.getElementById('item-count').textContent = filterProducts.length;
+
+    // Фильтруем продукты по категории
+    const filterProducts = category === 'all' 
+        ? products 
+        : products.filter(product => product.category === category);
+}
+
+// Обработчик кликов по фильтрам
+function setupFilters(products) {
+    const filterItems = document.querySelectorAll('.filter-item');
+    filterItems.forEach(filter => {
+        filter.addEventListener('click', () => {
+            filterItems.forEach(item => item.classList.remove('active'));
+            filter.classList.add('active');
+            const category = filter.getAttribute('data-category');
+            createCards(products, category);
+        });
+    });
+}
+
+//инициализации страницы
+async function init() {
+    const products = await fetchProducts(); 
+    setupFilters(products); 
+    createCards(products, 'all');
+}
+init();
