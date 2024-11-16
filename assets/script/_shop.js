@@ -157,10 +157,10 @@ function displayProducts(products) {
         card.innerHTML = `
             <div class="item-card__container" id="item-card">
                 <div class="item-card__container item-card__container_photo">
-                    <img src="${product.image}" alt="${product.name}" />
+                    <img src="${product.image}" alt="${product.name}">
                     <div class="item-card__overlay">
                         <a href="#" class="item-card__container item-card__container_arrow">
-                            <img src="../icon/arrow-wight_right.svg" alt="arrow_right" />
+                            <img src="../icon/arrow-wight_right.svg" alt="arrow_right">
                         </a>
                     </div>
                 </div>
