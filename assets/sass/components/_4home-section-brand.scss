@@ -1,16 +1,16 @@
-.brand,
-.brand__container {
-   border: 1px solid red;
-}
+// .brand,
+// .brand__container {
+//    border: 1px solid red;
+// }
 
-.brand__photo-container,
-.brand__info-container {
-   border: 1px solid green;
-}
+// .brand__photo-container,
+// .brand__info-container {
+//    border: 1px solid green;
+// }
 
-.brand__photoarrows-container {
-   border: 2px solid yellow;
-}
+// .brand__photoarrows-container {
+//    border: 2px solid yellow;
+// }
 
 .brand {
    @extend %container;
