@@ -1,11 +1,9 @@
 .main {
-  max-width: 1110px;
-  min-width: 320px;
-  margin: 0 auto;
+  @extend %container;
   display: flex;
   width: 100%;
-  margin-top: 40px;
-  margin-bottom: 80px;
+  margin-top: 30px;
+  margin-bottom: 60px;
 
   .info-section {
     display: flex;
@@ -22,9 +20,23 @@
     .text-slider__text-container {
       display: flex;
       justify-content: flex-end;
-      padding: 20px;
-      padding-right: 60px;
+      padding: 20px 60px 20px 20px;
+    }
 
+    .text-slider__title {
+      @include standart-text;
+      font-weight: 500;
+      font-size: 2.3em;
+      line-height: 110%;
+      color: $text-basic-color;
+    }
+
+    .text-slider__text {
+      @include standart-text;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 140%;
+      color: $text-basic-color;
     }
   }
 
@@ -32,8 +44,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 40px;
-    padding-right: 60px;
+    padding: 40px 60px 40px 40px;
     // margin-top: 30px; // Aligns with the image section on the right
   }
 
@@ -42,7 +53,7 @@
       justify-content: center;
       align-items: center;
   
-      .info-section__button-container_arrow{
+      .info-section__button-container_arrow {
         width: 67px;
         height: 67px;
         background-color: $background-arrow-style;
@@ -163,11 +174,110 @@
     }
 
 
-        // @media (max-width: 768px) {
-        //   .main {
-        //     flex-direction: column;
-        //     .info-section, .photo-section {
-        //       width: 100%;
-        //     }
-        //   }
-        // }
+// Медиа-запрос для экранов шириной в диапазоне 430-768px
+@media screen and (min-width: $mobile-size) and (max-width: $tablet-size) {
+  .main {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  #home-section1-main__title {
+    font-size: 2em;
+    line-height: 100%;
+  }
+
+  #home-section1-main__text {
+    font-size: 17px;
+    line-height: 110%;
+  }
+
+  #home-section1-main__button_open-shop {
+    padding: 18px 40px;
+    font-size: 15px;
+    line-height: 100%;
+  }
+
+
+  .photo-section,
+  .nested-container,
+  .photo-section__slider {
+    display: block;
+    max-width: 100%;
+  }
+
+  .photo-section__background {
+    top: -20%;
+  }
+}
+  // Медиа-запрос для экранов мобильных телефонов шириной 430px и меньше 
+  @media (max-width: $mobile-size) {
+    .main {
+      width: 100%;
+      flex-direction: column;
+
+      .info-section {
+        width: 100%;
+        margin-right: 0;
+
+        .info-section__text-slider {
+          justify-content: center;
+        }
+
+        .text-slider__text-container {
+          padding: 20px;
+        }
+
+        .button-and-scroll-bar-container {
+          align-items: center;
+          padding: 25px;
+        }
+      }
+
+
+    }
+    
+          #home-section1-main__title {
+        font-size: 2.3em;
+        line-height: 100%;
+      }
+    
+      #home-section1-main__text {
+        font-size: 18px;
+        line-height: 100%;
+      }
+    
+      #home-section1-main__button_open-shop {
+        padding: 18px 40px;
+        font-size: 15px;
+        line-height: 100%;
+      }
+    
+    .info-section__scroll-bar {
+      margin-top: 20px;
+      justify-content: center;
+  
+      .scroll-bar__dot {
+        width: 20px;
+        height: 3px;
+      }
+    }
+  
+    .photo-section,
+    .nested-container,
+    .photo-section__slider {
+      display: block;
+      align-items: center;
+      // max-width: 50%;
+    }
+  
+    .photo-section__background {
+      top: 0%;
+    }
+    
+
+
+    .info-section__button-container_arrow,
+    .photo-section__static-images {
+      display: none;
+    }
+}
