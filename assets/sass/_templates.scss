@@ -187,6 +187,7 @@ a {
   color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
   border: none;
   cursor: pointer; // добавила Настя
+  white-space: nowrap;
 
   &:hover { // добавила Настя
     background: $background-main_accent_button-color !important; 
@@ -208,6 +209,13 @@ a {
   text-align: center;
   color: $background-main_accent_button-color;
   align-items: center;
+  cursor: pointer;
+  white-space: nowrap;
+
+  &:hover {
+    color: white;
+    background-color: $main-color;
+  }
 }
 //==================Конец Кнопки====================//
 

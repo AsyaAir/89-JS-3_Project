@@ -2,9 +2,9 @@
 //    border: 1px solid red;
 // }
 
-.footerbar {
-   border: 1px solid green;
-}
+// .footerbar {
+//    border: 1px solid green;
+// }
 
 .footer {
    width: 100vw;
@@ -14,19 +14,58 @@
    flex-direction: row;
    align-items: center;
 
+   @media screen and (max-width: 1280px) {
+      height: 300px;
+   }
+
+   @media screen and (max-width: $tablet-size) {
+      height: auto;
+   }
+
    .footer__container {
       @extend %container;
       // width: 1110px;
       // width: 70%;
+   }
+
+   .footer__container,
+   .footerbarmenu__container {
       display: flex;
       flex-direction: row;
-      gap: 20px;
+      gap: 10px;
+
+      @media screen and (max-width: 1280px) {
+         gap: 75px;
+      }
+
+      @media screen and (max-width: $tablet-size) {
+         flex-direction: column;
+         gap: 0;
+         padding: 20px 0;
+      }
+
+      .footerbarmenu__container {
+         @media screen and (max-width: 1280px) {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+         }
+      }
 
       .footerbar {
          display: flex;
          flex-direction: column;
          justify-content: space-between;
          padding: 20px;
+         white-space: nowrap;
+
+         @media screen and (max-width: 1280px) {
+            padding: 10px;
+         }
+
+         @media screen and (max-width: $tablet-size) {
+            align-items: center;
+         }
 
          .footer-logo {
             display: flex;
@@ -40,6 +79,22 @@
             display: flex;
             flex-direction: column;
             margin-top: 30px;
+
+            @media screen and (max-width: $tablet-size) {
+               display: none;
+            }
+         }
+
+         .footerbar__product-menu {
+            @media screen and (max-width: 1280px) {
+               display: none;
+            }
+         }
+
+         .footerbarmenu__link {
+            &:hover {
+               color: $main-color;
+            }
          }
       }
    
@@ -49,6 +104,10 @@
    
          .footerbar__contacts-socials {
             width: 30px;
+         }
+
+         @media screen and (max-width: $tablet-size) {
+            align-items: center;
          }
       }
    }
