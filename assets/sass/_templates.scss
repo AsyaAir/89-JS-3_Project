@@ -48,16 +48,16 @@ a {
   letter-spacing: 0.02em;
   color: $text-basic-color;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: $desktop-size) {
     line-height: 70px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet-size) {
     font-size: 3.176470588235294em;
     line-height: 64px;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: $mobile-size) {
     font-size: 2.3529411764705883em;
     line-height: 44px;
   }
@@ -72,12 +72,12 @@ a {
   letter-spacing: 0.02em;
   color: $text-basic-color;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet-size) {
     font-size: 2.352941176470588em;
     line-height: 44px;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: $mobile-size) {
     font-size: 1.411764705882353em;
     line-height: 28px;
   }
@@ -92,12 +92,12 @@ a {
   letter-spacing: 0.02em;
   color: $text-basic-color;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $tablet-size) {
     font-size: 1.5625em;
     line-height: 32px;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: $mobile-size) {
     font-size: 1.411764705882353em;
     line-height: 28px;
   }
@@ -240,9 +240,10 @@ a {
   max-width: 1110px;
   min-width: 320px;
   margin: 0 auto;
-  // padding: 0 32px; // padding точно лишний
+  padding: 0 32px; // padding точно лишний
 
-  @media screen and (max-width: 1155px) {
+  @media screen and (max-width: $desktop-size) {
+    // max-width: 760px;
     padding: 0 20px;
   }
 }
