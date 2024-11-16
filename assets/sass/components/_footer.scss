@@ -14,7 +14,7 @@
    flex-direction: row;
    align-items: center;
 
-   @media screen and (max-width: 1280px) {
+   @media screen and (max-width: $desktop-size) {
       height: 300px;
    }
 
@@ -34,7 +34,7 @@
       flex-direction: row;
       gap: 10px;
 
-      @media screen and (max-width: 1280px) {
+      @media screen and (max-width: $desktop-size) {
          gap: 75px;
       }
 
@@ -45,7 +45,7 @@
       }
 
       .footerbarmenu__container {
-         @media screen and (max-width: 1280px) {
+         @media screen and (max-width: $desktop-size) {
             display: flex;
             flex-direction: column;
             gap: 0;
@@ -59,7 +59,7 @@
          padding: 20px;
          white-space: nowrap;
 
-         @media screen and (max-width: 1280px) {
+         @media screen and (max-width: $desktop-size) {
             padding: 10px;
          }
 
@@ -86,7 +86,7 @@
          }
 
          .footerbar__product-menu {
-            @media screen and (max-width: 1280px) {
+            @media screen and (max-width: $desktop-size) {
                display: none;
             }
          }
