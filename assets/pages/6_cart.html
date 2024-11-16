@@ -29,28 +29,21 @@
                 <div class="page-cart__table-row-item">
                     <p>x</p>
                     <img class="page-cart__table-img" src="../images/header_photos-products_one.png" alt="item">
-                    <p class="page-cart__item-name">Товар-со страницы корзина 1</p>    
+                    <p class="page-cart__item-name">Товар-со страницы корзина 1</p>
                 </div>
-                <p class="page-cart__table-row-rest page-cart__item-price">10 &#8381;</p>
+                <p class="page-cart__table-row-rest page-cart__item-price">100 &#8381;</p>
                 <div class="page-cart__table-row-rest">
-                    <p class="page-cart__table-cell-quantity">1</p>
+                    <input type="number"
+                    name="itemquantity"
+                    class="page-cart__table-cell-quantity"
+                    step="1"
+                    min="1"
+                    max="100"
+                    placeholder="1"
+                    value="1">
+                    <!-- <p class="page-cart__table-cell-quantity">1</p> -->
                 </div>
-                <p class="page-cart__table-row-rest page-cart__item-price-sum">200 &#8381;</p>
-                <!-- конец темплейта -->
-            </div>
-            <div class="page-cart__table-row">
-                <!-- в этот div ^ должны вставляться товары по темплейту ниже -->
-                <!-- ниже темплейт -->
-                <div class="page-cart__table-row-item">
-                    <p>x</p>
-                    <img class="page-cart__table-img" src="../images/header_photos-products_one.png" alt="item">
-                    <p class="page-cart__item-name">Товар-со страницы корзина 2</p>    
-                </div>
-                <p class="page-cart__table-row-rest page-cart__item-price">10 &#8381;</p>
-                <div class="page-cart__table-row-rest">
-                    <p class="page-cart__table-cell-quantity">1</p>
-                </div>
-                <p class="page-cart__table-row-rest page-cart__item-price-sum">1000 &#8381;</p>
+                <p class="page-cart__table-row-rest page-cart__item-price-sum"></p>
                 <!-- конец темплейта -->
             </div>
             
@@ -64,7 +57,7 @@
                     placeholder="Введите купон (н-р, discount20)">
                 <button class="page-cart__discount-btn button-white">Применить купон</button>
             </form>
-            <button class="page-cart__discount-btn button-white">Обновить корзину</button>
+            <button class="page-cart__update-btn button-white">Обновить корзину</button>
         </div>
         <div class="page-cart__checkout">
             <div  class="page-cart__checkout-sum">

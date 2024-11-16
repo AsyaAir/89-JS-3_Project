@@ -1,18 +1,40 @@
 const totalPageCart = document.querySelector('.page-cart__total');
+const itemPriceAll = document.querySelectorAll('.page-cart__item-price');
+const itemQuantityAll = document.querySelectorAll('.page-cart__table-cell-quantity');
+const itemPriceSumCellAll = document.querySelectorAll('.page-cart__item-price-sum');
+const btnUpdateCart = document.querySelector('.page-cart__update-btn');
+
+// КАЛЬКУЛЯТОР СТОИМОСТИ "ВСЕГО" В ЗАВИСИМОСТИ ОТ КОЛИЧЕСТВА
+
+function updateCart() {
+   itemPriceSumCellAll.forEach((itemPriceSumCell, index) => {
+      const price = Number(itemPriceAll[index].textContent.replace(' ₽', ''));
+      const quantity = itemQuantityAll[index].value;
+      const itemPriceSum = price * quantity;
+      itemPriceSumCell.textContent = itemPriceSum + ` ₽`;
+   });
+   calculateTotal();
+};
+updateCart();
 
 // КАЛЬКУЛЯТОР ТОТАЛ СУММЫ
 
-const itemPriceSumPageCart = document.querySelectorAll('.page-cart__item-price-sum');
-const itemPriceSums = Array.from(itemPriceSumPageCart).map((itemPriceSum) => {
-   return Number(itemPriceSum.textContent.replace(' ₽', ''));
-});
+function calculateTotal() {
+   if (itemPriceSumCellAll.length > 0) {
+      let total = 0;
+      itemPriceSumCellAll.forEach((itemPriceSumCell => {
+         const itemPriceSum = Number(itemPriceSumCell.textContent.replace(' ₽', ''));
+         total += itemPriceSum;
+      }))
+      totalPageCart.textContent = total + ` ₽`;
+   } else {
+      totalPageCart.textContent = '0 ₽'; // пока не работает
+   };
+};
 
-if (itemPriceSums) {
-   let total = 0;
-   itemPriceSums.forEach(itemsum => total += itemsum);
-   totalPageCart.textContent = total + ` ₽`;
-} else {
-   totalPageCart.textContent = '0 ₽';
+btnUpdateCart.onclick = (evt) => {
+   evt.preventDefault();
+   updateCart();
 };
 
 // КАЛЬКУЛЯТОР СКИДКИ

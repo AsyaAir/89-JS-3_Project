@@ -8,15 +8,15 @@ if (currentPage.includes('cart.html')) {
    const btnMakeOrder = document.querySelector('.page-cart__checkout-btn');
 
    const itemNamePageCart = document.querySelectorAll('.page-cart__item-name');
-   const itemNames = Array.from(itemNamePageCart).map((item) => {return item.textContent}); // 1 - создаём массив DOM-объектов, 2 - map - преобразуем в массив строк с введёнными значенями(текстом)
    const itemSumPageCart = document.querySelectorAll('.page-cart__item-price-sum');
-   const itemSums = Array.from(itemSumPageCart).map((sum) => {return sum.textContent});
-
    const totalTextPageCart = document.querySelector('.page-cart__total-text');
 
    const totalPageCart = document.querySelector('.page-cart__total');
 
    btnMakeOrder.onclick = () => {
+      // 1 - создаём массив DOM-объектов, 2 - map - преобразуем в массив строк с введёнными значенями(текстом)
+      const itemNames = Array.from(itemNamePageCart).map((item) => {return item.textContent});
+      const itemSums = Array.from(itemSumPageCart).map((sum) => {return sum.textContent});
       // Сохраняем название и сумму товаров в localStorage
       localStorage.setItem('itemNames', JSON.stringify(itemNames));
       localStorage.setItem('itemSums', JSON.stringify(itemSums));
