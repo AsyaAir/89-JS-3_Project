@@ -6,7 +6,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 450,
         "discounted_price": 311,
-        "image": "89-JS-3_Project/assets/images/one-item_sweatshot_sweet_shot.png"
+        "image": "one-item_sweatshot_sweet_shot.png"
     },
     {
         "name": "Свитшот Black Swan",
@@ -15,7 +15,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 450,
         "discounted_price": 311,
-        "image": "89-JS-3_Project/assets/images/item_sweatshot_black_swan.png"
+        "image": "item_sweatshot_black_swan.png"
     },
     {
         "name": "Свитшот Harajuku",
@@ -24,7 +24,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 450,
         "discounted_price": 311,
-        "image": "89-JS-3_Project/assets/images/item_sweatshot_harajuku.png"
+        "image": "item_sweatshot_harajuku.png"
     },
     {
         "name": "Свитшот Green Stripes",
@@ -33,7 +33,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 450,
         "discounted_price": 311,
-        "image": "89-JS-3_Project/assets/images/item_sweatshot_green_stripes.png"
+        "image": "item_sweatshot_green_stripes.png"
     },
     {
         "name": "Футболка USA",
@@ -42,7 +42,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 229,
         "discounted_price": 129,
-        "image": "89-JS-3_Project/assets/images/header_photos-products_one.png"
+        "image": "header_photos-products_one.png"
     },
     {
         "name": "Футболка Life",
@@ -51,7 +51,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 229,
         "discounted_price": 129,
-        "image": "89-JS-3_Project/assets/images/item_t_shirt_life.png"
+        "image": "item_t_shirt_life.png"
     },
     {
         "name": "Футболка Nice",
@@ -60,7 +60,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 229,
         "discounted_price": 129,
-        "image": "89-JS-3_Project/assets/images/item_t_shirt_nice.png"
+        "image": "item_t_shirt_nice.png"
     },
     {
         "name": "Футболка Happy",
@@ -69,7 +69,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 229,
         "discounted_price": 129,
-        "image": "89-JS-3_Project/assets/images/item_t_shirt_happy.png"
+        "image": "item_t_shirt_happy.png"
     },
     {
         "name": "Купальник Glow",
@@ -78,7 +78,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 129,
         "discounted_price": 107,
-        "image": "89-JS-3_Project/assets/images/header_photos-products_two.png"
+        "image": "header_photos-products_two.png"
     },
     {
         "name": "Купальник Black",
@@ -87,7 +87,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 129,
         "discounted_price": 107,
-        "image": "89-JS-3_Project/assets/images/item_swimsuit_black.png"
+        "image": "item_swimsuit_black.png"
     },
     {
         "name": "Купальник Botanical",
@@ -96,7 +96,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 129,
         "discounted_price": 107,
-        "image": "89-JS-3_Project/assets/images/item_swimsuit_botanical.png"
+        "image": "item_swimsuit_botanical.png"
     },  
     {
         "name": "Купальник Pink Dreem",
@@ -105,7 +105,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 129,
         "discounted_price": 107,
-        "image": "89-JS-3_Project/assets/images/item_swimsuit_pink_dreem.png"
+        "image": "item_swimsuit_pink_dreem.png"
     },
     {
         "name": "Пальто Light",
@@ -114,7 +114,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 940,
         "discounted_price": 720,
-        "image": "89-JS-3_Project/assets/images/homesec-main_1.png"
+        "image": "homesec-main_1.png"
     },  
     {
         "name": "Пальто Calm",
@@ -123,7 +123,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 940,
         "discounted_price": 720,
-        "image": "89-JS-3_Project/assets/images/item_coat_calm.png"
+        "image": "item_coat_calm.jpeg"
     },
     {
         "name": "Пальто Over",
@@ -132,7 +132,7 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 940,
         "discounted_price": 720,
-        "image": "89-JS-3_Project/assets/images/item_coat_over.png"
+        "image": "item_coat_over.jpeg"
     }, 
     {
         "name": "Пальто Green Dream",
@@ -141,6 +141,6 @@
         "sizes": ["S", "M", "L", "XL"],
         "price": 940,
         "discounted_price": 720,
-        "image": "89-JS-3_Project/assets/images/item_coat_green_dream.png"
+        "image": "item_coat_green_dream.jpeg"
     }  
 ]
