@@ -180,3 +180,4 @@ const countElement = document.getElementById('count');
 //счетчик товаров
 totalCountElement.textContent = products.length;
 countElement.textContent = products.length; // показано кол-во
+

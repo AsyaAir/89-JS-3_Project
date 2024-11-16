@@ -1,4 +1,4 @@
-// ----- Функционал переноса названий+итоговых стоимостей товаров и тотал суммы(с применённой скидкой) со страницы cart на страницу checkout
+// Функционал переноса названий + итоговых стоимостей товаров и тотал суммы(с применённой скидкой) со страницы cart на страницу checkout
 
 // Получаем текущий URL
 const currentPage = window.location.pathname;
@@ -8,16 +8,21 @@ if (currentPage.includes('cart.html')) {
    const btnMakeOrder = document.querySelector('.page-cart__checkout-btn');
 
    const itemNamePageCart = document.querySelectorAll('.page-cart__item-name');
-   const itemNames = Array.from(itemNamePageCart).map((item) => {return item.textContent}); // создаём массив DOM-объектов, map - преобразуем в массив строк с введёнными значенями(текстом)
    const itemSumPageCart = document.querySelectorAll('.page-cart__item-price-sum');
-   const itemSums = Array.from(itemSumPageCart).map((sum) => {return sum.textContent});
+   const totalTextPageCart = document.querySelector('.page-cart__total-text');
 
    const totalPageCart = document.querySelector('.page-cart__total');
 
    btnMakeOrder.onclick = () => {
+      // 1 - создаём массив DOM-объектов, 2 - map - преобразуем в массив строк с введёнными значенями(текстом)
+      const itemNames = Array.from(itemNamePageCart).map((item) => {return item.textContent});
+      const itemSums = Array.from(itemSumPageCart).map((sum) => {return sum.textContent});
       // Сохраняем название и сумму товаров в localStorage
       localStorage.setItem('itemNames', JSON.stringify(itemNames));
       localStorage.setItem('itemSums', JSON.stringify(itemSums));
+
+      // Сохраняем текст ("с или без скидки") в localStorage
+      localStorage.setItem('cartTotalText', totalTextPageCart.textContent)
 
       // Сохраняем `total` в localStorage
       localStorage.setItem('cartTotal', totalPageCart.textContent);
@@ -44,6 +49,11 @@ if (currentPage.includes('checkout.html')) {
          <p>${sum}</p>`;
       divCartPageCheckout.insertBefore(divCartRowContentPageCheckout, divCartSummeryPageCheckout); // вставляем внутри divCartPageCheckout, но перед divCartSummeryPageCheckout
    });
+
+   // Получаем текст "Итого с/без скидки"
+   const cartTotalText = localStorage.getItem('cartTotalText');
+   const totalTextPageCheckout = document.querySelector('.page-checkout__total-text');
+   totalTextPageCheckout.textContent = cartTotalText;
 
    // Получаем `total` из localStorage и вставляем его на страницу
    const cartTotal = localStorage.getItem('cartTotal');

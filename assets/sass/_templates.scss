@@ -16,13 +16,6 @@ html {
 body {
   width: 100%;
   height: 100%;
-
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-
-
-  // font-family: "Raleway", sans-serif;
   font-family: $font-family;
   font-weight: 500;
   font-size: 17px;
@@ -246,13 +239,59 @@ a {
   }
 }
 
-// Шаблон для "магии корзины" в Header
+// Шаблоны-миксины для названий и цен в карточках товаров (от Насти). 
+// Добавляется к стилям командой @include item-card-title или @include item-card-price
+
+//==================Шаблоны текста карточки товара НАЧАЛО====================//
+
+// Шаблон стандартного набора шрифта для всего сайта
+@mixin standart-text {
+  font-family: $font-family;
+  letter-spacing: 0.02em;
+}
+
+// Шаблон стиля текста карточки товара 
+@mixin item-card-text-style {
+  @include standart-text;
+  font-weight: 500;
+  line-height: 140%;
+  color: $text-basic-color;
+}
+
+// Шаблон стиля названия товара в его карточке 
+@mixin item-card-title {
+  @include item-card-text-style;
+  font-size: 20px;
+}
+
+// Шаблон стиля цены товара в его карточке 
+@mixin item-card-price {
+  @include item-card-text-style;
+  font-size: 15px;
+  color: $additional-accent-color;
+}
+
+// Шаблон стиля старой цены товара в его карточке
+@mixin item-card-old-price {
+  @include item-card-text-style;
+  font-size: 15px;
+  color: $additional-accent-color;
+  text-decoration: line-through;
+}
+
+//==================Шаблоны текста карточки товара КОНЕЦ====================//
+
+
+// Шаблон для "магии корзины" в Header (от Насти)
+
+//==================Шаблоны "Магия корзины" НАЧАЛО====================//
 .cart {
   position: relative;
   // text-align: center;
 }
 
 .cart-item__count {
+  @include standart-text;
   position: absolute;
   display: flex;
   align-items: center;
@@ -265,12 +304,52 @@ a {
   background-color: $additional-accent-color;
   color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
   border-radius: 50%;
-  padding: 2px 6px;
-  font-family: $font-family;
+  padding: 5px 7px;
   font-size: 9px;
   font-weight: 400;
-  letter-spacing: 0.02em;
   line-height: 100%;
 }
+
+//==================Шаблоны "Магия корзины" КОНЕЦ====================//
+
+// Шаблон для блока breadcrumbs ("Хлебные крошки") (от Насти). 
+
+//==================Шаблоны breadcrumbs ("Хлебные крошки") НАЧАЛО====================//
+
+.item-container__breadcrumbs {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  .breadcrumbs {
+    @include standart-text;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+#breadcrumb__now {
+  margin: 0 5px;
+  color: $text-current_navigation_path-color !important; // Увеличение приоритета
+}
+
+// // Увеличенная специфичность
+// body .item-container__breadcrumbs .breadcrumbs .breadcrumb {
+//   color: $text-current_navigation_path-color ; // Временный фикс
+// }
+
+//==================Шаблоны breadcrumbs ("Хлебные крошки") КОНЕЦ====================//
+
+
+
+
 
 
