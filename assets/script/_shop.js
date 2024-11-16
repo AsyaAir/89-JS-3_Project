@@ -145,21 +145,35 @@ const products = [
     }  
 ]
 
-
-const itemCardContainer = document.getElementById('item-card');
-
-products.forEach((product, index) => {
-    const cardProduct = document.createElement('div');
-    cardProduct.className = 'item-card__container';
-
-    cardProduct.innerHTML = `
-        <div class="item-card__container item-card__container_photo">
-            <img src="${product.image}" alt="${product.name}">
+const createCard = (obj) => {
+    const card = document.createElement('div');
+    card.className = 'item-card';
+    card.innerHTML = `
+        <div class="item-card__container" id="item-card">
+            <div class="item-card__container item-card__container_photo">
+                <img src="${obj.image}" alt="${obj.name}" />
+                <div class="item-card__overlay">
+                    <a href="#" class="item-card__container item-card__container_arrow">
+                        <img src="../icon/arrow-wight_right.svg" alt="arrow_right" />
+                    </a>
+                </div>
+            </div>
+            <h4 class="card-title item-card__container item-card__container_title">${obj.name}</h4>
+            <div class="item-card__container item-card__container_price">
+                $${obj.discounted_price} <span class="original-price">$${obj.price}</span>
+            </div>
         </div>
-        <h4 class="card-title item-card__container item-card__container_title">${product.name}</h4>
-        <div class="item-card__container item-card__container_price">${product.discounted_price} <del>${product.price}</del></div>
     `;
-
-    itemCardContainer.appendChild(cardProduct);
+    return div;
+}
+const shopCardsContainer = document.querySelector('.shop-container__cards');
+products.forEach((element) => {
+    const card = createCard(element);
+    shopCardsContainer.appendChild(card);
 });
 
+    //обновление счетчика товаров
+    totalCountElement.textContent = products.length;
+    countElement.textContent = products.length; // показано кол-во
+
+createCard(products);

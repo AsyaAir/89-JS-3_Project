@@ -1,0 +1,33 @@
+.shop {
+  padding: 194px 0 135px;
+}
+.shop-container {
+  
+
+}
+.shop-container__title {
+}
+
+.filter-items {
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+}
+
+.filter-item {
+  padding: 19px 65px;
+  border: 1px solid #000;
+  margin: 114px 0 92px;
+  cursor: pointer;
+}
+
+.filter-item:hover.active {
+  background-color: #000;
+  color: white;
+}
+.woocommerce-result-count {
+}
+.goods {
+}
+.shop-container__cards {
+}
