@@ -145,38 +145,39 @@ const products = [
     }  
 ]
 
-const shopCardsContainer = document.getElementById('shop-cards');
-const totalCountElement = document.getElementById('total-number-products');
-const countElement = document.getElementById('count');
-
-function displayProducts(products) {
-    products.forEach(product => {
-        const card = document.createElement('div');
-        card.className = 'item-card';
-
-        card.innerHTML = `
-            <div class="item-card__container" id="item-card">
-                <div class="item-card__container item-card__container_photo">
-                    <img src="${product.image}" alt="${product.name}">
-                    <div class="item-card__overlay">
-                        <a href="#" class="item-card__container item-card__container_arrow">
-                            <img src="../icon/arrow-wight_right.svg" alt="arrow_right">
-                        </a>
-                    </div>
-                </div>
-                <h4 class="card-title item-card__container item-card__container_title">${product.name}</h4>
-                <div class="item-card__container item-card__container_price">
-                    $${product.discounted_price} <span class="original-price">$${product.price}</span>
+const createCard = (obj) => {
+    const card = document.createElement('div');
+    card.className = 'item-card';
+    card.innerHTML = `
+        <div class="item-card__container" id="item-card">
+            <div class="item-card__container item-card__container_photo">
+                <img src="${obj.image}" alt="${obj.name}">
+                <div class="item-card__overlay">
+                    <a href="#" class="item-card__container item-card__container_arrow">
+                        <img src="../icon/arrow-wight_right.svg" alt="arrow_right">
+                    </a>
                 </div>
             </div>
-        `;
-        
-        shopCardsContainer.appendChild(card);
-    });
+            <h4 class="card-title item-card__container item-card__container_title">${obj.name}</h4>
+            <div class="item-card__container item-card__container_price">
+                $${obj.discounted_price} <span class="original-price">$${obj.price}</span>
+            </div>
+        </div>
+    `;
 
-    //обновление счетчика товаров
-    totalCountElement.textContent = products.length;
-    countElement.textContent = products.length; // показано кол-во
-};
+    return card;
+    }
 
-displayProducts(products);
+const shopCardsContainer = document.querySelector('.shop-container__cards');
+products.forEach((element) => {
+    const card = createCard(element);
+    shopCardsContainer.appendChild(card);
+});
+
+const totalCountElement = document.getElementById('total');
+const countElement = document.getElementById('count');
+
+//счетчик товаров
+totalCountElement.textContent = products.length;
+countElement.textContent = products.length; // показано кол-во
+
