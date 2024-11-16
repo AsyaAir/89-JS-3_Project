@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../node_modules/normalize.css/">
+    <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="shortcut icon" href="../icon/logo_womazing.svg" type="image/svg">
     <title>home</title>
@@ -74,13 +74,13 @@
         <div class="main">
             <div class="info-section">
                 <div class="info-section__text-slider">
-                    <h2 class="text-slider__title title" data-slide="0">Новые поступления <br>в этом сезоне</h2>
-                    <h2 class="text-slider__title title" data-slide="1">Что-то новенькое <br>Мы заждались тебя</h2>
-                    <h2 class="text-slider__title title" data-slide="2">Включай новый  <br>сезон с WOMAZING</h2>
+                    <h2 class="text-slider__title" id="home-section1-main__title" data-slide="0">Новые поступления <br>в этом сезоне</h2>
+                    <h2 class="text-slider__title" id="home-section1-main__title" data-slide="1">Что-то новенькое <br>Мы заждались тебя</h2>
+                    <h2 class="text-slider__title" id="home-section1-main__title" data-slide="2">Включай новый  <br>сезон с WOMAZING</h2>
                     <div class="text-slider__text-container">
-                        <p class="text-slider__text" data-slide="0">Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне. Время исследовать.</p>
-                        <p class="text-slider__text" data-slide="1">Надоело искать себя в сером городе? Настало время новых идей, свежих красок и вдохновения с Womazing!</p>
-                        <p class="text-slider__text" data-slide="2">Мы обновили ассортимент - <br>легендарные коллекции и новинки от отечественных дизайнеров</p>
+                        <p class="text-slider__text" id="home-section1-main__text" data-slide="0">Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне. Время исследовать.</p>
+                        <p class="text-slider__text" id="home-section1-main__text" data-slide="1">Надоело искать себя в сером городе? Настало время новых идей, свежих красок и вдохновения с Womazing!</p>
+                        <p class="text-slider__text" id="home-section1-main__text" data-slide="2">Мы обновили ассортимент - <br>легендарные коллекции и новинки от отечественных дизайнеров</p>
                     </div>
                 </div>
                 <div class="button-and-scroll-bar-container">
@@ -89,7 +89,7 @@
                             <a href="#new collection"><img src="../icon/arrow_down.svg" alt="arrow down"></a>
                         </div>
                         <div class="info-section__button-container info-section__button-container_button">
-                            <button class="info-section__button info-section__button_open-shop button" onclick="location.href='./2_page_shop.html'">
+                            <button class="info-section__button info-section__button_open-shop button" id="home-section1-main__button_open-shop" onclick="location.href='./2_page_shop.html'">
                                 Открыть магазин
                             </button>
                         </div>

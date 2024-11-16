@@ -22,6 +22,22 @@
       justify-content: flex-end;
       padding: 20px 60px 20px 20px;
     }
+
+    .text-slider__title {
+      @include standart-text;
+      font-weight: 500;
+      font-size: 2.3em;
+      line-height: 110%;
+      color: $text-basic-color;
+    }
+
+    .text-slider__text {
+      @include standart-text;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 140%;
+      color: $text-basic-color;
+    }
   }
 
   .button-and-scroll-bar-container {
@@ -158,39 +174,29 @@
     }
 
 
-        // @media (max-width: 768px) {
-        //   .main {
-        //     flex-direction: column;
-        //     .info-section, .photo-section {
-        //       width: 100%;
-        //     }
-        //   }
-        // }
-// Медиа-запрос для экранов шириной в диапазоне 430-720px
+// Медиа-запрос для экранов шириной в диапазоне 430-768px
 @media screen and (min-width: $mobile-size) and (max-width: $tablet-size) {
-  .title {
+  .main {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  #home-section1-main__title {
     font-size: 2em;
-    line-height: 40px;
+    line-height: 100%;
   }
 
-  .text-slider__text {
-    font-size: 1.1em;
-    line-height: 44px;
+  #home-section1-main__text {
+    font-size: 17px;
+    line-height: 110%;
   }
 
-  .info-section__button_open-shop button {
+  #home-section1-main__button_open-shop {
+    padding: 18px 40px;
     font-size: 15px;
     line-height: 100%;
   }
-  
-  .info-section__scroll-bar {
-    margin-top: 60px;
 
-    .scroll-bar__dot {
-      width: 20px;
-      height: 3px;
-    }
-  }
 
   .photo-section,
   .nested-container,
@@ -203,25 +209,52 @@
     top: -20%;
   }
 }
-  // Медиа-запрос для экранов мобильных телефонов шириной 430px и меньше - Настя
-  @media (max-width: 430px) {
-    .text-slider__title {
-      font-size: 2.352941176470588em;
-      line-height: 44px;
-    }
-  
-    .text-slider__text {
-      font-size: 2.352941176470588em;
-      line-height: 44px;
-    }
-  
-    .info-section__button_open-shop button {
-      font-size: 2.352941176470588em;
-      line-height: 44px;
+  // Медиа-запрос для экранов мобильных телефонов шириной 430px и меньше 
+  @media (max-width: $mobile-size) {
+    .main {
+      width: 100%;
+      flex-direction: column;
+
+      .info-section {
+        width: 100%;
+        margin-right: 0;
+
+        .info-section__text-slider {
+          justify-content: center;
+        }
+
+        .text-slider__text-container {
+          padding: 20px;
+        }
+
+        .button-and-scroll-bar-container {
+          align-items: center;
+          padding: 25px;
+        }
+      }
+
+
     }
     
+          #home-section1-main__title {
+        font-size: 2.3em;
+        line-height: 100%;
+      }
+    
+      #home-section1-main__text {
+        font-size: 18px;
+        line-height: 100%;
+      }
+    
+      #home-section1-main__button_open-shop {
+        padding: 18px 40px;
+        font-size: 15px;
+        line-height: 100%;
+      }
+    
     .info-section__scroll-bar {
-      margin-top: 100px;
+      margin-top: 20px;
+      justify-content: center;
   
       .scroll-bar__dot {
         width: 20px;
@@ -233,11 +266,12 @@
     .nested-container,
     .photo-section__slider {
       display: block;
-      max-width: 100%;
+      align-items: center;
+      // max-width: 50%;
     }
   
     .photo-section__background {
-      top: -20%;
+      top: 0%;
     }
     
 
@@ -246,66 +280,4 @@
     .photo-section__static-images {
       display: none;
     }
-    
-    .main {
-      width: 100%;
-      flex-direction: column;
-    }
-
-
-    // .greeting-area-button-container__button_order-here-arrow {
-    //     display: block;
-    //     font-size: 16px;
-    //     font-weight: 400;
-    // }
-
-    // .about-us-pic {
-    //     max-width: 380px;
-    //     max-height: 277px;
-    // }
-    // .about-us-pic__image_cup {
-    //     width: 100%;
-    //     display: block;
-    //     stroke-width: 4px;
-    //     stroke: $secondary---hard-green; // смена цвета картинки по макету Figma для .svg картинки
-    //     bottom: 3%;
-    //     left: 3%;
-    // }
-    // .about-us-pic__rectangle {
-    //     width: 390px;
-    //     height: 248px;
-    //     position: absolute;
-    // }
-    // .about-us-text,
-    // .promotion-text {
-    //     width: 100%;
-    //     margin: 0;
-    //     padding: 20px;
-    // }
-    // .promotion-pic__rectangle {
-    //     width: 375px;
-    //     height: 320px;
-    //     position: absolute;
-    // }
-    // .promotion-pic__image_big-cup {
-    //     width: 100%;
-    //     display: block;
-    //     left: 23%;
-    // }
-
-    // .map-2 {
-    //     display: block;
-    // }
-    // .map-2__picture,
-    // .map-2 {
-    //     max-width: 100%;
-    // }
-    // .addresses {
-    //     align-items: center;
-    // }
-    // .addresses__button-container {
-    //     display: block;
-        
-
-    // }
 }
