@@ -336,11 +336,8 @@ a {
     }
   }
 }
-.breadcrumb__now {
-  margin: 0 5px;
-}
-
 #breadcrumb__now {
+  margin: 0 5px;
   color: $text-current_navigation_path-color !important; // Увеличение приоритета
 }
 
