@@ -13,13 +13,21 @@ header {
     display: flex;
     gap: 10px;
     align-items: center;
+    flex-wrap: wrap;
+    margin-top: 130px;
   }
   
   .filter-item {
     padding: 19px 65px;
     border: 1px solid $text-basic-color;
-    margin: 214px 0 92px;
     cursor: pointer;
+
+    @media screen and (max-width: 991px) {
+      max-width: 300px;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
   }
   
   .filter-item.active {
@@ -50,11 +58,13 @@ header {
     display: flex;
     gap: 30px;
     margin-top: 92px;
+    flex-wrap: wrap
   }
 
   .item-card__container {
     max-width: 350px;
     width: 100%;
+    height: 558px;
   }
 
   .item-card__container_photo {
