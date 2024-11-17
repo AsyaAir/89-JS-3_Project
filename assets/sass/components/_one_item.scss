@@ -162,31 +162,6 @@ main {
         cursor: pointer;
         padding-left: 20px;
 
-        // appearance: none; 
-        // -moz-appearance: textfield; // Для Firefox
-        // position: relative;
-
-        // // Стилизация стрелок для WebKit (Chrome, Edge, Safari)
-        // &::-webkit-inner-spin-button, 
-        // &::-webkit-outer-spin-button {
-        // appearance: none; // Убирает стандартные стрелки
-        // display: block; // Делает стрелки блочными
-        // width: 100%; // Растягиваем на ширину контейнера
-        // height: 50%; // Верхняя занимает половину, нижняя — вторую
-        // // background: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
-        // border: none;
-        // cursor: pointer;
-        // }
-        // &::-webkit-inner-spin-button {
-        //     position: absolute;
-        //     top: 0; // Прижимаем к верху
-        // }
-    
-        // &::-webkit-outer-spin-button {
-        //     position: absolute;
-        //     bottom: 0; // Прижимаем к низу
-        // }
-
     }
     .button-add-to-cart__container {
         flex-shrink: 0;

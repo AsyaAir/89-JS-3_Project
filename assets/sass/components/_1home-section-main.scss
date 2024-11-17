@@ -45,7 +45,6 @@
     flex-direction: column;
     align-items: flex-end;
     padding: 40px 60px 40px 40px;
-    // margin-top: 30px; // Aligns with the image section on the right
   }
 
     .info-section__button-container {
@@ -74,8 +73,6 @@
 }
 
   .info-section__scroll-bar {
-    // margin-top: auto;
-    // z-index: 10; 56
     display: flex;
     gap: 8px;
     justify-content: center;
@@ -124,8 +121,6 @@
         z-index: 2; 
         top: -25%; // Adjusts to meet the header's top
         left: 0;
-        // margin-top: -200px;  // [высота header]
-        // right: 0;
         bottom: 0;
       }
 
@@ -135,9 +130,6 @@
         position: relative;
         z-index: 3;
         // padding-left: 50px;  // Controls horizontal positioning within the section
-        // left: ;
-        // right: ;
-        // top: -10%;
 
         img {
           display: none;
@@ -159,7 +151,6 @@
 
       &.photo-section_left-container {
         left: -40px;  // Adjust horizontal position for left image
-        // top: 50%;     // Center align or adjust as needed
       }
       
       &.photo-section_right-container {
@@ -201,7 +192,6 @@
     line-height: 100%;
   }
 
-
   .photo-section,
   .nested-container,
   .photo-section__slider {
@@ -236,7 +226,6 @@
           padding: 25px;
         }
       }
-
 
     }
     
@@ -275,15 +264,12 @@
     .photo-section__slider {
       display: block;
       align-items: center;
-      // max-width: 50%;
     }
   
     .photo-section__background {
       top: 0%;
     }
     
-
-
     .info-section__button-container_arrow,
     .photo-section__static-images {
       display: none;
