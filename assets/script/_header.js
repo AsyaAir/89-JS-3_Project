@@ -8,5 +8,5 @@ btnMenu.addEventListener('click', function() {
 });
 
 window.addEventListener('scroll', () => { 
-  document.querySelector('.header').classList.toggle('scrolling', window.scrollY > 50); 
+  document.querySelector('.header').classList.toggle('scrolling', window.scrollY > 50);
 });
