@@ -7,11 +7,6 @@ btnMenu.addEventListener('click', function() {
   btnMenu.setAttribute('aria-expanded', openMenu);
 });
 
-window.addEventListener('scroll', function() {
-  const header = document.querySelector('.header');
-  if (window.scrollY > 0) { 
-    header.classList.add('scroll');
-  } else {
-    header.classList.remove('scroll');
-  }
+window.addEventListener('scroll', () => { 
+  document.querySelector('.header').classList.toggle('scrolling', window.scrollY > 50); 
 });
