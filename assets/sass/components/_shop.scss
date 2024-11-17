@@ -1,44 +1,44 @@
 .shop {
-  padding: 194px 0 135px;
-  margin-top: 210px;
-}
+  .shop-container { 
+    @extend %container;
 
-.shop-container { 
-  max-width: 1110px;
-  min-width: 320px;
-  margin: 0 auto;
-
-  @media screen and (max-width: 1155px) {
-    padding: 0 20px;
+    margin-top: 174px;
   }
-}
-
-.filter-items {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.filter-item {
-  padding: 19px 65px;
-  border: 1px solid $text-basic-color;
-  margin: 114px 0 92px;
-  cursor: pointer;
-}
-
-.filter-item:hover.active {
-  background-color: $text-basic-color;
-  color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
-}
-
-.count {
-  font-family: $font-family;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 140%;
-  letter-spacing: 0.02em;
-  color: #808080;
-}
-
-.shop-container__cards {
+    
+  .filter-items {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .filter-item {
+    padding: 19px 65px;
+    border: 1px solid $text-basic-color;
+    margin: 214px 0 92px;
+    cursor: pointer;
+  }
+  
+  .filter-item.active {
+    background-color: $text-basic-color;
+    color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
+  }
+  
+  .filter-item:hover {
+    background-color: $text-basic-color;
+    color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
+  }
+  
+  .shop-container__count {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #808080;
+    margin-top: 92px;
+  }
+  
+  .shop-container__cards {
+    margin-top: 65px;
+  }
 }
