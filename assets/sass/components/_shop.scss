@@ -13,13 +13,21 @@ header {
     display: flex;
     gap: 10px;
     align-items: center;
+    flex-wrap: wrap;
+    margin-top: 130px;
   }
   
   .filter-item {
     padding: 19px 65px;
     border: 1px solid $text-basic-color;
-    margin: 214px 0 92px;
     cursor: pointer;
+
+    @media screen and (max-width: 991px) {
+      max-width: 300px;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
   }
   
   .filter-item.active {
@@ -51,10 +59,11 @@ header {
     gap: 30px;
     margin-top: 92px;
   }
-
+  
   .item-card__container {
     max-width: 350px;
     width: 100%;
+    flex-wrap: wrap
   }
 
   .item-card__container_photo {
@@ -91,17 +100,20 @@ header {
   
   .item-card__container_title {
     margin-top: 24px;
+    display: flex;
+    justify-content: center;
   }
   
   .item-card__container_price {
-    margin-top: 7px;
-  
     font-family: $font-family;
     font-weight: 500;
     font-size: 15px;
     line-height: 140%;
     letter-spacing: 0.02em;
     color: $text-old_price-color;
+    margin-top: 7px;
+    display: flex;
+    justify-content: center;
   }
 
   .shop-container__pagination {
@@ -110,8 +122,14 @@ header {
     align-items: center;
     gap: 10px;
     margin-top: 20px;
+    padding: 130px;
   }
   .shop-container__pagination-button {
-
+    width: 100%;
+    background-color: $text-basic-color;
+    border: 1px solid $text-basic-color;
+    max-width: 41px;
+    height: 41px;
+    color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
   }
 }
