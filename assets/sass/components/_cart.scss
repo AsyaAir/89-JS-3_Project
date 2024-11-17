@@ -56,6 +56,10 @@ header {
             width: 136px;
             height: 205px;
             object-fit: cover;
+
+            @media screen and (max-width: $desktop-size) {
+               display: none;
+            }
          }
    
          .page-cart__table-row-rest {
@@ -78,12 +82,22 @@ header {
    .page-cart__discount {
       display: flex;
       justify-content: space-between;
+
+      @media screen and (max-width: $desktop-size) {
+         flex-direction: column;
+         gap: 30px;
+      }
    }
 
    .page-cart__checkout {
       display: flex;
       justify-content: flex-end;
       margin-top: 75px;
+
+      @media screen and (max-width: $desktop-size) {
+         flex-direction: column;
+         gap: 30px;
+      }
 
       .page-cart__checkout-sum {
          display: flex;
@@ -94,6 +108,7 @@ header {
          padding: 10px 30px;
          margin: 0 20px;
          background-color: $background-beige-color;
+         white-space: nowrap;
       }
 
       .page-cart__checkout-btn {

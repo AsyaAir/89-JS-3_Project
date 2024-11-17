@@ -20,6 +20,11 @@ header {
       margin: 75px 0 75px 0;
       justify-content: space-between;
 
+      @media screen and (max-width: $tablet-size) {
+         flex-direction: column;
+         gap: 50px;
+      }
+
       .page-checkout__forms,
       .page-checkout__cart {
          display: flex;
@@ -52,6 +57,11 @@ header {
 
       .page-checkout__cart-sum__result {
          background-color: $background-beige-color;
+      }
+
+      .page-checkout__errormessage {
+         color: rgb(172, 0, 0);
+         display: none;
       }
    }
 }

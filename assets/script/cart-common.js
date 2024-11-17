@@ -179,10 +179,40 @@ if (currentPage.includes('checkout.html')) {
       // localStorage.removeItem('cartTotal'); // Очищаем `localStorage`, если больше не нужно
    };
 
-   // ФУНКЦИОНАЛ ЗАВЕРШЕНИЯ ПОКУПКИ
+   // ВАЛИДАЦИЯ ФОРМЫ
+
+   const inputs = document.querySelectorAll('input');
+   inputs.forEach(function(input) {
+      input.addEventListener('focus', function() {
+         input.style.outline = 'none';
+         input.style.border = '1px solid #6e9c9f';
+      });
+      input.addEventListener('blur', function() {
+         input.style.border = '';
+      });
+   });
 
    const btnCompleteOrder = document.querySelector('.page-checkout__button');
+
+   btnCompleteOrder.disabled = true;
+   const agreeCash = document.querySelector('#input__cash');
+   agreeCash.onchange = () => {btnCompleteOrder.disabled = !agreeCash.checked;};
+
+   // ФУНКЦИОНАЛ ЗАВЕРШЕНИЯ ПОКУПКИ
+
    btnCompleteOrder.onclick = () => {
+      let hasEmptyInputs = false;
+      inputs.forEach(function(input) {
+         if (input.value.trim() === '') {
+            hasEmptyInputs = true;
+         };
+      });
+      if (hasEmptyInputs) {
+         const errorMessage = document.querySelector('.page-checkout__errormessage');
+         errorMessage.style.display = 'block';
+         return;
+      };
+
       localStorage.removeItem('itemNames');
 
       window.location.href = '/89-JS-3_Project/assets/pages/8_success.html';
