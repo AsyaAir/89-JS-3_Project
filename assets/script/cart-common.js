@@ -110,7 +110,7 @@ if (currentPage.includes('cart.html')) {
          totalTextPageCart.textContent = 'Итого со скидкой:';
 
          let total = Number(totalPageCart.textContent.replace(' ₽', ''));
-         totalPageCart.textContent = total * 0.8 + ` ₽`;
+         totalPageCart.textContent = Math.floor(total * 0.8) + ` ₽`;
 
          inputDiscount.value = '';
       } else {
@@ -148,6 +148,8 @@ if (currentPage.includes('cart.html')) {
 
 // Код для страницы Checkout
 if (currentPage.includes('checkout.html')) {
+   // ФУНКЦИОНАЛ КОРЗИНЫ
+
    // Получаем название и сумму товаров из localStorage и вставляем на страницу
    const itemNames = JSON.parse(localStorage.getItem('itemNames'));
    const itemSums = JSON.parse(localStorage.getItem('itemSums'));
@@ -175,5 +177,14 @@ if (currentPage.includes('checkout.html')) {
    if (cartTotal) {
       totalPageCheckout.textContent = cartTotal;
       // localStorage.removeItem('cartTotal'); // Очищаем `localStorage`, если больше не нужно
+   };
+
+   // ФУНКЦИОНАЛ ЗАВЕРШЕНИЯ ПОКУПКИ
+
+   const btnCompleteOrder = document.querySelector('.page-checkout__button');
+   btnCompleteOrder.onclick = () => {
+      localStorage.removeItem('itemNames');
+
+      window.location.href = '/89-JS-3_Project/assets/pages/8_success.html';
    };
 };
