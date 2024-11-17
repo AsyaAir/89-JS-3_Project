@@ -228,7 +228,12 @@ a {
   border: none;
   border-bottom: 1px solid grey;
   padding: 15px 0 15px 0;
-  width: 350px;
+  max-width: 350px;
+  min-width: 250px;
+
+  @media screen and (max-width: $desktop-size) {
+    max-width: 300px;
+  }
 }
 
 .textarea {
