@@ -181,12 +181,16 @@
     justify-content: flex-start;
   }
 
-  #home-section1-main__title {
+  #home-section1-main__title1,
+  #home-section1-main__title2, 
+  #home-section1-main__title3 {
     font-size: 2em;
     line-height: 100%;
   }
 
-  #home-section1-main__text {
+  #home-section1-main__text1,
+  #home-section1-main__text2,
+  #home-section1-main__text3 {
     font-size: 17px;
     line-height: 110%;
   }
