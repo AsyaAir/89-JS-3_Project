@@ -61,10 +61,10 @@
   .main-menu__items.main-menu__open {
     display: flex; 
     flex-direction: column;
-    width: 50px;
+    width: 100%;
     height: auto;
     position: absolute;
-    left: 0;
+    left: -27px;
     transform: translateX(-50%);
     top: calc(100% + 10px);
     z-index: 1000;
@@ -86,6 +86,10 @@
 
   @media screen and (max-width: 820px) {
     justify-content: space-evenly
+  }
+
+  @media screen and (max-width: 440px) {
+    display: none;
   }
 
   .phone__button-callback {
@@ -115,9 +119,7 @@
   column-gap: 145px;
 }
 
-.active {
+.active-header-link {
   color: $main-color;
   font-weight: bold;
 }
-
-// ======== модальное окно ========
