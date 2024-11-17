@@ -6,3 +6,7 @@ btnMenu.addEventListener('click', function() {
 
   btnMenu.setAttribute('aria-expanded', openMenu);
 });
+
+window.addEventListener('scroll', () => { 
+  document.querySelector('.header').classList.toggle('scrolling', window.scrollY > 50);
+});
