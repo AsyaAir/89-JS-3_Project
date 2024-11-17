@@ -49,17 +49,20 @@
 
 .item-card__container_title {
   margin-top: 24px;
+  display: flex;
+  justify-content: center;
 }
 
 .item-card__container_price {
-  margin-top: 7px;
-
   font-family: $font-family;
   font-weight: 500;
   font-size: 15px;
   line-height: 140%;
   letter-spacing: 0.02em;
   color: $text-old_price-color;
+  margin-top: 7px;
+  display: flex;
+  justify-content: center;
 }
 
 .shop__button {
