@@ -169,78 +169,128 @@ const createCard = (obj) => {
 }
 
 const shopCardsContainer = document.querySelector('.shop-container__cards');
-products.forEach((element) => {
-    const card = createCard(element);
-    shopCardsContainer.appendChild(card);
-});
 
-const totalCountElement = document.getElementById('total');
-const countElement = document.getElementById('count');
+// фильтр товаров
+const filterItems = document.querySelectorAll('.filter-item');
+let currentCategory = "all";
+let currentPage = 1; 
+const itemsPerPage = 9;
 
-//счетчик товаров
-totalCountElement.textContent = products.length;
-countElement.textContent = products.length; // показано кол-во
+// Функция для отображения товаров на странице
+const renderProducts = (category, page) => {
+    // Очищаем контейнер
+    shopCardsContainer.innerHTML = "";
 
-// =============== другой варинт ===============
-
-//получение данных из API
-async function fetchProducts() {
-    const response = await fetch('https://fakestoreapi.com/products');
-    const data = await response.json();
-    return data;
-}
-
-//отображение товаров на странице
-function createCards(products, category) {
-    const container = document.querySelector('.shop-container__cards');
-    container.innerHTML = ''; 
-
-    filterProducts.forEach(product => {
-        const itemCard = document.createElement('div');
-        itemCard.className = 'item-card';
-        itemCard.innerHTML = `
-            <div class="item-card__container" id="item-card">
-                <div class="item-card__container item-card__container_photo">
-                    <img src="${product.image}" alt="${product.name}">
-                    <div class="item-cardoverlay">
-                        <a href="./assets/script/_one_item.js" class="item-cardc__ontainer item-card__container_arrow">
-                            <img src="../icon/arrow-wight_right.svg" alt="arrow_right">
-                        </a>
-                    </div>
-                </div>
-                <h4 class="card-title item-cardcontainer item-cardcontainer_title">${product.name}</h4>
-                <div class="item-cardcontainer item-card__container_price">$${product.price} $${product.discounted_price}</div>
-            </div>
-        `;
-        container.appendChild(itemCard);
+    // Фильтруем товары по категории
+    const filteredProducts = products.filter(product => {
+        return category === "all" || product.category === category;
     });
 
-    // счетчик товаров
-    document.getElementById('item-count').textContent = filterProducts.length;
+    // Пагинация: расчёт товаров для текущей страницы
+    const startIndex = (page - 1) * itemsPerPage;
+    const currentPageItems = filteredProducts.slice(startIndex, startIndex + itemsPerPage);
 
-    // Фильтруем продукты по категории
-    const filterProducts = category === 'all' 
-        ? products 
-        : products.filter(product => product.category === category);
-}
+    const totalCountElement = document.getElementById('total');
+    const countElement = document.getElementById('count');
+
+    //счетчик товаров
+    totalCountElement.textContent = filteredProducts.length;
+    countElement.textContent = currentPageItems.length; // показано кол-во
+
+    // добавляем карточки на страницу
+    currentPageItems.forEach(product => {
+        const card = createCard(product);
+        shopCardsContainer.appendChild(card);
+    });
+
+    // номер страницы
+    document.getElementById('page-number').textContent = currentPage;
+};
 
 // Обработчик кликов по фильтрам
-function setupFilters(products) {
-    const filterItems = document.querySelectorAll('.filter-item');
-    filterItems.forEach(filter => {
-        filter.addEventListener('click', () => {
-            filterItems.forEach(item => item.classList.remove('active'));
-            filter.classList.add('active');
-            const category = filter.getAttribute('data-category');
-            createCards(products, category);
-        });
-    });
-}
+filterItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+        // Обновляем активный фильтр
+        filterItems.forEach(item => item.classList.remove('active'));
+        e.target.classList.add('active');
 
-//инициализации страницы
-async function init() {
-    const products = await fetchProducts(); 
-    setupFilters(products); 
-    createCards(products, 'all');
-}
-init();
+        // Получаем категорию и перерисовываем товары
+        currentCategory = e.target.getAttribute('data-category');
+        renderProducts(currentCategory, 1);
+    });
+});
+
+// Обработчик пагинации
+document.getElementById('next').addEventListener('click', () => {
+    const totalPages = Math.ceil(products.filter(product => currentCategory === "all" || product.category === currentCategory).length / itemsPerPage);
+    if (currentPage < totalPages) {
+        currentPage++;
+        renderProducts(currentCategory, currentPage);
+    }
+});
+
+renderProducts("all", 1);
+
+// // =============== другой варинт ===============
+
+// //получение данных из API
+// async function fetchProducts() {
+//     const response = await fetch('https://fakestoreapi.com/products');
+//     const data = await response.json();
+//     return data;
+// }
+
+// //отображение товаров на странице
+// function createCards(products, category) {
+//     const container = document.querySelector('.shop-container__cards');
+//     container.innerHTML = ''; 
+
+//     filterProducts.forEach(product => {
+//         const itemCard = document.createElement('div');
+//         itemCard.className = 'item-card';
+//         itemCard.innerHTML = `
+//             <div class="item-card__container" id="item-card">
+//                 <div class="item-card__container item-card__container_photo">
+//                     <img src="${product.image}" alt="${product.name}">
+//                     <div class="item-cardoverlay">
+//                         <a href="./assets/script/_one_item.js" class="item-cardc__ontainer item-card__container_arrow">
+//                             <img src="../icon/arrow-wight_right.svg" alt="arrow_right">
+//                         </a>
+//                     </div>
+//                 </div>
+//                 <h4 class="card-title item-cardcontainer item-cardcontainer_title">${product.name}</h4>
+//                 <div class="item-cardcontainer item-card__container_price">$${product.price} $${product.discounted_price}</div>
+//             </div>
+//         `;
+//         container.appendChild(itemCard);
+//     });
+
+//     // счетчик товаров
+//     document.getElementById('item-count').textContent = filterProducts.length;
+
+//     // Фильтруем продукты по категории
+//     const filterProducts = category === 'all' 
+//         ? products 
+//         : products.filter(product => product.category === category);
+// }
+
+// // Обработчик кликов по фильтрам
+// function setupFilters(products) {
+//     const filterItems = document.querySelectorAll('.filter-item');
+//     filterItems.forEach(filter => {
+//         filter.addEventListener('click', () => {
+//             filterItems.forEach(item => item.classList.remove('active'));
+//             filter.classList.add('active');
+//             const category = filter.getAttribute('data-category');
+//             createCards(products, category);
+//         });
+//     });
+// }
+
+// //инициализации страницы
+// async function init() {
+//     const products = await fetchProducts(); 
+//     setupFilters(products); 
+//     createCards(products, 'all');
+// }
+// init();

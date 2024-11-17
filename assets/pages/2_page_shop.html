@@ -60,16 +60,23 @@
                 <h2 class="page-title shop-container__title">Магазин</h2>
 
                 <ul class="filter-items">
-                    <li class="filter-item active">Все</li>
-                    <li class="filter-item">Пальто</li>
-                    <li class="filter-item">Свитшоты</li>                        
-                    <li class="filter-item">Кардиганы</li>
-                    <li class="filter-item">Толстовки</li>
+                    <li class="filter-item active" data-category="all">Все</li>
+                    <li class="filter-item" data-category="coat">Пальто</li>
+                    <li class="filter-item" data-category="sweatshirts">Свитшоты</li>                        
+                    <li class="filter-item" data-category="cardigans">Кардиганы</li>
+                    <li class="filter-item" data-category="hoodies">Толстовки</li>
                 </ul>
 
-                <p class="shop-container__count">Показано:  из  товаров</p>
+                <p class="shop-container__count">Показано: <span id="count">0</span> из <span id="total">0</span> товаров</p>
 
                 <div class="shop-container__cards"></div>
+
+                <div class="shop-container__pagination">
+                    <span id="page-number">1</span>
+                    <button id="next" class="shop-container__pagination-button">
+                        <img src="../icon/arrow_right.svg" alt="arrow_right.svg">
+                    </button>
+                </div>
             </div>
         </section>
     </main>
