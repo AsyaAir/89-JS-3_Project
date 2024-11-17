@@ -2,7 +2,7 @@
   @extend %container;
   display: flex;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 90px;
   margin-bottom: 60px;
 
   .info-section {
@@ -121,7 +121,7 @@
         width: 100%;
         height: 110%;
         background-color: $background-beige-color; 
-        z-index: -1; 
+        z-index: 2; 
         top: -25%; // Adjusts to meet the header's top
         left: 0;
         // margin-top: -200px;  // [высота header]
@@ -133,7 +133,7 @@
         width: 100%;
         max-width: 400px;
         position: relative;
-        z-index: 2;
+        z-index: 3;
         // padding-left: 50px;  // Controls horizontal positioning within the section
         // left: ;
         // right: ;
@@ -154,7 +154,7 @@
       display: flex;  
       position: absolute;
       top: 110px;  // Adjust vertical alignment relative to slider image
-      z-index: 3; // Поверх слайдера //
+      z-index: 4; // Поверх слайдера //
       // transform: translateX(-60%);
 
       &.photo-section_left-container {
@@ -236,12 +236,16 @@
 
     }
     
-          #home-section1-main__title {
+          #home-section1-main__title1,
+          #home-section1-main__title2,
+          #home-section1-main__title3 {
         font-size: 2.3em;
         line-height: 100%;
       }
     
-      #home-section1-main__text {
+      #home-section1-main__text1,
+      #home-section1-main__text2,
+      #home-section1-main__text3 {
         font-size: 18px;
         line-height: 100%;
       }

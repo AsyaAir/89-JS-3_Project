@@ -10,6 +10,53 @@
     <title>checkout</title>
 </head>
 <body>
+        <!-- Шапка _header -->
+        <header class="header">
+            <div class="logo">
+                <a href="#top" class="logo__link">
+                    <img src="../icon/logo_womazing.svg" alt="logo_womazing" class="logo__icon">
+                    Womazing
+                </a>
+            </div>
+            <nav class="main-menu">
+                <button class="main-menu__btn-burger" aria-expanded="false">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <ul class="main-menu__items">
+                    <li class="main-menu__link main-menu__link_home">
+                        <a href="./1_page_home.html" class="active-header-link">Главная</a>
+                    </li>
+                    <li class="main-menu__link main-menu__link_shop">
+                        <a href="./2_page_shop.html">Магазин</a>
+                    </li>
+                    <li class="main-menu__link main-menu__link_about-brand">
+                        <a href="./4_about_brand.html">О бренде</a>
+                    </li>
+                    <li class="main-menu__link main-menu__link_contacts">
+                        <a href="./5_contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="phone">
+                <button type="button" class="phone__button-callback">
+                    <img src="../icon/telephone_icon.svg" alt="telephone_icon" class="phone__icon">
+                </button>
+                <a href="tel:+74958235412" class="phone__link">+7 (495) 823-54-12</a>
+            </div>
+            <div class="cart">
+                <ul class="cart-items">
+                    <li class="cart-item">
+                        <a href="./6_cart.html" class="cart-item__link">
+                            <img src="../icon/shopping_cart_icon.svg" alt="shopping_cart_icon" class="cart-item__img">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
     <main class="page-checkout">
         <h2 class="page-checkout__title page-title">Оформление заказа</h2>
         <p>хлебные крошки</p>
@@ -158,6 +205,8 @@
         </div>
     </footer>
 
+    <script src="../script/_header.js"></script>
+    <script src="../script/_update-items-on-icon-cart.js"></script>
     <!-- <script src="../script/fill-cart-from-pagecart-to-pagecheckout.js"></script> -->
     <script src="../script/cart-common.js"></script>
 </body>

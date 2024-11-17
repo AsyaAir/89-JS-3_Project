@@ -4,12 +4,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  z-index: 100;
+  position: fixed;
+  z-index: 5;
   width: 100%;
   //background-color: rgba(255, 255, 255, 0);
-  background-color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
-  padding: 33px 20px 34px 20px;
+  // background-color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color; // убран стиль только для главной страницы (Настя)
+  padding: 33px 0 34px 0;
   top: 0;
   left: 0;
   right: 0;
