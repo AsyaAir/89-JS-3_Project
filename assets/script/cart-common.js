@@ -162,7 +162,7 @@ if (currentPage.includes('checkout.html')) {
       divCartRowContentPageCheckout.classList.add('page-checkout__cart-sum__row-content');
       divCartRowContentPageCheckout.innerHTML = `
          <p>${name}</p>
-         <p>${sum}</p>`;
+         <p class="page-checkout__cart-sum__row-content-sum">${sum}</p>`;
       divCartPageCheckout.insertBefore(divCartRowContentPageCheckout, divCartSummeryPageCheckout); // вставляем внутри divCartPageCheckout, но перед divCartSummeryPageCheckout
    });
 
