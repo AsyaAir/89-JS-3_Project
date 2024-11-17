@@ -7,7 +7,8 @@
   position: fixed;
   z-index: 100;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0);
+  //background-color: rgba(255, 255, 255, 0);
+  background-color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
   padding: 33px 0 34px 0;
   top: 0;
   left: 0;
@@ -100,17 +101,12 @@
   }
   
   .phone__button-callback:hover {
-    background-color: $main-color;
+    background-color: #09716a4b;
   }
   
   .phone__icon {
     max-width: 17px;
     max-height: 17px;
-  }
-  
-  .phone__button-callback:hover 
-  .phone__icon {
-    content: url(89-JS-3_Project/assets/icon/telephone_icon_white.svg);
   }
 }
 
@@ -120,5 +116,6 @@
 }
 
 .active {
-  color: #088178;
+  color: $main-color;
+  font-weight: bold;
 }
