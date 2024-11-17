@@ -1,5 +1,10 @@
+header {
+   background-color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
+}
+
 .page-contacts {
    @extend %container;
+   width: 70vw;
    padding: 100px 0 100px 0;
    display: flex;
    flex-direction: column;
@@ -10,8 +15,8 @@
    }
 
    .page-contacts__map {
-      width: 1110px;
-      height: 476px;
+      width: 100%;
+      height: 400px;
       margin: 100px 0 100px 0;
 
       iframe {
