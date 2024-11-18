@@ -1,3 +1,16 @@
 header {
     background-color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color;
 }
+
+.page-aboutbrand {
+    @extend %container;
+    width: 70vw;
+    padding: 100px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .page-aboutbrand__title {
+        margin: 0;
+    }
+}
