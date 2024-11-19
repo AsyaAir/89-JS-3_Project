@@ -7,7 +7,7 @@
   position: fixed;
   z-index: 5;
   width: 100%;
-  //background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
   // background-color: $text-main_colored_buttons_and_quantity_of_goods_in_basketgit-color; // убран стиль только для главной страницы (Настя)
   padding: 33px 20px 34px 20px;
   top: 0;
@@ -105,7 +105,7 @@
   }
   
   .phone__button-callback:hover {
-    background-color: #09716a4b;
+    background-color: $main-color;
   }
   
   .phone__icon {
@@ -122,4 +122,27 @@
 .active-header-link {
   color: $main-color;
   font-weight: bold;
+}
+//================== Модальное окно ====================//
+
+.modal-callback {
+  display: none;
+}
+.modal-wrapper {
+}
+.modal-callback__btn-close {
+}
+.modal-callback__title {
+}
+.form {
+}
+.form__input {
+}
+.form__button {
+}
+
+.modal-success {
+  display: none;
+}
+.modal-success__button {
 }
