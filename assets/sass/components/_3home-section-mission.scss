@@ -1,0 +1,36 @@
+.mission {
+  @extend %container;
+
+  margin-top: 130px;
+
+  .mission__container {
+    margin-top: 90px;
+    margin-bottom: 130px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.quality,
+.quickness,
+.responsibility {
+  margin: 0 75px 0 0;
+}
+.quality__icon,
+.quickness__icon,
+.quickness__icon {
+  max-width: 61px;
+  height: 61px;
+  width: 100%;
+}
+.quality__title,
+.quickness__title,
+.responsibility__title {
+  padding: 37px 0 24px 0;
+}
+.quality__text
+.quickness__text
+.responsibility__text {
+  max-width: 305px;
+  width: 100%;
+}
