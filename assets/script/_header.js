@@ -7,22 +7,22 @@ btnMenu.addEventListener('click', function() {
 });
 
 
-// //смена картинки при наведении
-// const phoneButtons = document.querySelectorAll('.phone__button-callback');
+//смена картинки при наведении
+const phoneButtons = document.querySelectorAll('.phone__button-callback');
 
-// phoneButtons.forEach(button => {
-//   button.addEventListener('mouseover', () => {
-//     const img = button.querySelector('.phone__icon');
-//     img.src = '../icon/telephone_icon_white.svg'; 
-//   });
+phoneButtons.forEach(button => {
+  button.addEventListener('mouseover', () => {
+    const img = button.querySelector('.phone__icon');
+    img.src = '../icon/telephone_icon_white.svg'; 
+  });
 
-//   button.addEventListener('mouseout', () => {
-//     const img = button.querySelector('.phone__icon');
-//     img.src = '../icon/telephone_icon.svg'; 
-//   });
-// });
+  button.addEventListener('mouseout', () => {
+    const img = button.querySelector('.phone__icon');
+    img.src = '../icon/telephone_icon.svg'; 
+  });
+});
 
 // смена цвета "липкого" меню
-// window.addEventListener('scroll', () => { 
-//   document.querySelector('.header').classList.toggle('scrolling', window.scrollY > 50);
-// });
+window.addEventListener('scroll', () => { 
+    document.querySelector('.header').classList.toggle('scrolling', window.scrollY > 50);
+});
