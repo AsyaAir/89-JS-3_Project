@@ -41,7 +41,7 @@
             </ul>
         </nav>
         <div class="phone">
-            <button type="button" class="phone__button-callback">
+            <button type="button" class="phone__button-callback" onclick="overlayCallback.showModal()">
                 <img src="../icon/telephone_icon.svg" alt="telephone_icon" class="phone__icon">
             </button>
             <a href="tel:+74958235412" class="phone__link">+7 (495) 823-54-12</a>
@@ -58,26 +58,29 @@
         </div>
     </header>
 
-    <div class="modal-callback">
-        <div class="modal-wrapper">
-            <button type="button" class="modal-callback__btn-close">
+    <dialog id="overlayCallback">
+        <form action="dialog">
+            <button type="submit" class="modal-callback__btn-close">
                 <img src="../icon/Close.svg" alt="close_modal">
             </button>
-            <h3 class="modal-callback__title">Заказать обратный звонок</h3>
-            <form action="#" class="form" method="post">
-                <input type="text" placeholder="Имя" id="name" name="name" class="form__input" required>
-                <input type="mail" placeholder="E-mail" id="email" name="email" class="form__input" required>
-                <input type="tel" placeholder="Телефон" id="phone" name="phone" class="form__input" required>
-                <button class="form__button">Заказать звонок</button>
-            </form>
-        </div>
-    </div>
+        </form>
+            
+        <h3 class="modal-callback__title">Заказать обратный звонок</h3>
+            
+        <form action="#" class="form" method="post">
+            <input type="text" placeholder="Имя" id="name" name="name" class="form__input" required>
+            <input type="mail" placeholder="E-mail" id="email" name="email" class="form__input" required>
+            <input type="tel" placeholder="Телефон" id="phone" name="phone" class="form__input" required>
+            <button class="form__button">Заказать звонок</button>
+        </form>
+    </dialog>
 
-    <div class="modal-success">
+    
+    <dialog id="overlayCallback">
         <h3>Отлично! Мы скоро вам перезвоним.</h3>
-        <button type="button" class="modal-success__button">Закрыть</button>
-    </div>
-        
+        <button type="submit" class="modal-success__button">Закрыть</button>
+    </dialog>
+
     <main>
     
         <!-- Секция 1 Новые поступления в этом сезоне с переходом в магазин через кнопку _1home-section-main -->
