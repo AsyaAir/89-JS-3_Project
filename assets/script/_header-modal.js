@@ -1,8 +1,3 @@
-// const dialog = document.querySelector('dialog')
-// document.querySelector('.phone__button-callback').onclick = function () {
-//   dialog.showl()
-// }
-
 const overlayCallback = document.getElementById('overlayCallback');
 const overlaySuccess = document.getElementById('overlaySuccess');
 
@@ -29,3 +24,5 @@ const callbackBtn = document.getElementById('.phone__button-callback');
 callbackBtn.addEventListener('click', () => {
   overlayCallback.showModal()
 });
+
+const overlay = document.querySelector('.overlay');

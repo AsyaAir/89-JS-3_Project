@@ -58,16 +58,17 @@
         </div>
     </header>
 
+    <div class="overlay"></div>
     <dialog id="overlayCallback">
-        <form action="dialog">
+        <form action="dialog" id="btn-close">
             <button type="submit" class="modal-callback__btn-close">
                 <img src="../icon/Close.svg" alt="close_modal">
             </button>
         </form>
             
-        <h3 class="modal-callback__title">Заказать обратный звонок</h3>
-            
+        
         <form action="#" class="form" method="post">
+            <h3 class="modal-callback__title">Заказать обратный звонок</h3>
             <input type="text" placeholder="Имя" id="name" name="name" class="form__input" required>
             <input type="mail" placeholder="E-mail" id="email" name="email" class="form__input" required>
             <input type="tel" placeholder="Телефон" id="phone" name="phone" class="form__input" required>
@@ -77,8 +78,8 @@
 
     
     <dialog id="overlaySuccess">
-        <h3>Отлично! Мы скоро вам перезвоним.</h3>
-        <button type="submit" class="modal-success__button">Закрыть</button>
+        <h3 class="modal-callback__title">Отлично! Мы скоро вам перезвоним.</h3>
+        <button type="submit" class="button-close">Закрыть</button>
     </dialog>
 
     <main>
