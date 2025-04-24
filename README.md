@@ -55,20 +55,21 @@ cd 89-JS-3_Project
 or use Live Server in VS Code for better development experience
 
   <h2 id="technologies-used">Technologies Used</h2>
-  
+<div>
 ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![SCSS](https://img.shields.io/badge/-SCSS-CC6699?style=flat-square&logo=sass&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-
+</div>
   <h2 id="license">License</h2>
   <p>This project is proprietary. Please contact the author for permission to use, modify, or distribute the code.</p>
 
   <h2 id="contact">Contact</h2>
   <p>If you have any questions or suggestions, feel free to contact me!</p>
-
+<div>
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:anatulupnikoff@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anastasia-tulupnikoff/)
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=flat-square&logo=telegram&logoColor=white)](https://t.me/AsyaAir)
+</div>
 </div>
 
 # Comments for contributors
