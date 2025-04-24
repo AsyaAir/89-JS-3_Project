@@ -21,7 +21,7 @@ This project showcases modern layout techniques and a clean design using only HT
 
   </p>
   <p>
-    This application was created by me 2 сontributors like a team as a pet project during our studies at an IT school, allowing to apply knowledge in software development while working on an engaging and educational tool.
+    This application was created by me and 2 сontributors like a team as a pet project during our studies at an IT school, allowing to apply knowledge in software development while working on an engaging and educational tool.
   </p>
 
   <h2 id="features">Features</h2>
