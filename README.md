@@ -40,10 +40,6 @@ This project showcases modern layout techniques and a clean design using only HT
     <li><strong>Desktop</strong> (1440px).</li>
     <li><strong>Tablet</strong> (768px).</li>
     <li><strong>Mobile</strong> (375px).</li>
-    <li><strong>Team section</strong> with hover effects.</li>
-    <li><strong>Contact form</strong> with validation.</li>
-    <li><strong>Fully responsive design</strong> desktop/tablet/mobile.</li>
-    <li><strong>Navigation</strong> page-to-page.</li>
   </ul>
 
   <h2 id="installation">Installation</h2>
